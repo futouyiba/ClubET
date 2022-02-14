@@ -95,5 +95,26 @@ namespace ET
                 }
             }
         }
+        
+        public static void HandleError(this MessageDispatcherComponent self, Session session, ushort opcode, object message)
+        {
+            if (!self.Handlers.TryGetValue(opcode, out var actions))
+            {
+                Log.Error($"消息没有处理: {opcode} {message.GetType()} {message}");
+                return;
+            }
+
+            foreach (IMHandler ev in actions)
+            {
+                try
+                {
+                    ev.Handle(session, message);
+                }
+                catch (Exception e)
+                {
+                    Log.Error(e);
+                }
+            }
+        }
     }
 }

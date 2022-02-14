@@ -183,6 +183,7 @@ namespace ET
                 {
                     (ushort opcode, MemoryStream stream) = MessageSerializeHelper.MessageToStream(message);
                     OpcodeHelper.LogMsg(this.DomainZone(), opcode, message);
+                    Log.Info(BitConverter.ToString(stream.ToArray()));
                     this.Send(0, stream);
                     break;
                 }

@@ -56,6 +56,7 @@ namespace ET
         public void OnError(long channelId, int e)
         {
             this.Remove(channelId);
+            Log.Error("send error..."+e.ToString());
             
             this.ErrorCallback?.Invoke(channelId, e);
         }

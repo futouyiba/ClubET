@@ -1,39 +1,70 @@
 ﻿using System;
+using System.ComponentModel;
+using System.IO;
+using System.Net;
+using System.Threading.Tasks;
 
 namespace ET
 {
     public class RegisteHelper
     {
+        static string DEVICE_PRODUCT_ID = "DEVICE_PRODUCT_ID";
+        static string DEVICE_MODEL = "DEVICE_MODEL";
+        // static string USER_ID = "USER_ID";
+        private static int registerPostfix = 40;
+        static string CloudIp = "82.157.8.127";
+        static int port = 8800;
         public static async ETTask Register(Entity fuiComponent, string address, string account, string password)
         {
             try
             {
+                await RegisteHelper.Connect(fuiComponent, address);
+                
                 Scene zoneScene = fuiComponent.DomainScene();
 
-                if (account == "" || password == "")
+                if (account != "")
                 {
-                    await Game.EventSystem.Publish(new EventType.LoginOrRegsiteFail()
-                        {ErrorMessage = "账号名或密码不能为空", ZoneScene = zoneScene});
-                    return;
+                    registerPostfix = int.Parse(account);
                 }
 
-                R2C_Registe r2CRegiste;
+                string postfixString = registerPostfix == 0 ? string.Empty : registerPostfix.ToString();
 
-                Session session = zoneScene.GetComponent<NetKcpComponent>().Create(NetworkHelper.ToIPEndPoint(address));
+                // // if (account == "" || password == "")
+                // if (account == "" )
+                // {
+                //     await Game.EventSystem.Publish(new EventType.LoginOrRegsiteFail()
+                //         {ErrorMessage = "注册后缀不能为空", ZoneScene = zoneScene});
+                //         // {ErrorMessage = "账号名或密码不能为空", ZoneScene = zoneScene});
+                //     return;
+                // }
+
+                // R2C_Registe r2CRegiste;
+                // FUI_LoadingComponent.ShowLoadingUI();
+                Game.Scene.GetComponent<PlayerComponent>()  .RealmSession.Send(new register_user_c2s()
                 {
-                    FUI_LoadingComponent.ShowLoadingUI();
-                    r2CRegiste = (R2C_Registe) await session.Call(new C2R_Registe()
-                        {Account = account, Password = password});
-                    FUI_LoadingComponent.HideLoadingUI();
-                    if (r2CRegiste.Error == ErrorCode.ERR_AccountHasExist)
-                    {
-                        await Game.EventSystem.Publish(new EventType.LoginOrRegsiteFail()
-                            {ErrorMessage = "账号已存在", ZoneScene = zoneScene});
-                        session.Dispose();
-                        return;
-                    }
-                }
-                session.Dispose();
+                    device_type = 1,
+                    device_model = DEVICE_MODEL + postfixString,
+                    device_product_id = DEVICE_PRODUCT_ID + postfixString,
+                });
+                // var bytes = new byte[] {13,16,39,0,0,18,35,8,1,18,12,100,101,118,105,99,101,95,
+                //     109,111,100,101,108,26,17,100,101,118,105,99,101,95,112,
+                //     114,111,100,117,99,116,95,105,100};
+                // var stream = new MemoryStream(bytes);
+                // Game.Scene.GetComponent<PlayerComponent>().RealmSession.Send(0, stream);
+                // r2CRegiste = (R2C_Registe) await session.Call(new C2R_Registe()
+                //     {Account = account, Password = password});
+                // FUI_LoadingComponent.HideLoadingUI();
+                // if (r2CRegiste.Error == ErrorCode.ERR_AccountHasExist)
+                // {
+                //     await Game.EventSystem.Publish(new EventType.LoginOrRegsiteFail()
+                //         {ErrorMessage = "账号已存在", ZoneScene = zoneScene});
+                //     session.Dispose();
+                //     return;
+                // }
+                registerPostfix++;
+                await Task.CompletedTask;
+
+                // session.Dispose();
             }
             catch (Exception e)
             {
@@ -43,6 +74,19 @@ namespace ET
             {
                 FUI_LoadingComponent.HideLoadingUI();
             }
+
+
+        }
+        public static async ETTask Connect(Entity fuiComponent, string address)
+        {
+            var selectorEndpoint = address!=""? NetworkHelper.ToIPEndPoint(address):NetworkHelper.ToIPEndPoint(CloudIp, port);
+            var playerComponent = Game.Scene.GetComponent<PlayerComponent>();
+            if (playerComponent.RealmSession==null || playerComponent.RealmSession.IsDisposed)
+            {
+                playerComponent.RealmSession = fuiComponent.DomainScene() .GetComponent<NetKcpComponent>().Create(selectorEndpoint);
+            }
+
+            await Task.CompletedTask;
         }
     }
 }

@@ -1,0 +1,595 @@
+args: user_id=0, min_interval_secs=3, max_interval_secs=10
+Eshell V10.2  (abort with ^G)
+1> connecting to selector, ip=<<"127.0.0.1">>, port=8800
+1> connecting to selector, done
+1> send_msg: {register_user_c2s,1,<<"device_model">>,<<"device_product_id">>,
+                             undefined}
+1> send_msg: raw data=<<13,16,39,0,0,18,35,8,1,18,12,100,101,118,105,99,101,95,
+                     109,111,100,101,108,26,17,100,101,118,105,99,101,95,112,
+                     114,111,100,117,99,116,95,105,100>>
+1> recv_msg: raw data=<<13,17,39,0,0,18,2,8,1,24,0>>
+1> recv_msg: {register_user_s2c,1}
+1> send_msg: {get_transfer_endpoint_c2s,1,0}
+1> send_msg: raw data=<<13,18,39,0,0,18,4,8,1,16,0>>
+1> recv_msg: raw data=<<13,19,39,0,0,18,18,10,9,49,50,55,46,48,46,48,46,49,16,225,
+                     68,24,160,156,1,24,0>>
+1> recv_msg: {get_transfer_endpoint_s2c,<<"127.0.0.1">>,8801,20000}
+1> connecting to transfer, ip=<<"127.0.0.1">>, port=8801
+1> connecting to transfer, done
+1> send_msg: {authenticate_c2s,1,1,<<"device_product_id">>}
+1> send_msg: raw data=<<13,32,78,0,0,18,23,8,1,16,1,26,17,100,101,118,105,99,101,
+                     95,112,114,111,100,117,99,116,95,105,100>>
+1> recv_msg: raw data=<<13,33,78,0,0,18,0,24,0>>
+1> recv_msg: {authenticate_s2c}
+1> recv_msg: raw data=<<13,35,78,0,0,18,29,8,1,16,1,50,23,8,1,21,162,69,54,63,29,
+                     104,145,77,63,32,0,45,0,0,128,63,48,1,58,0,24,0>>
+1> recv_msg: {all_sync_s2c,1,1,[],[],[],
+                        [{player,1,0.7120000123977661,0.8029999732971191,0,
+                                 1.0,1,<<>>}]}
+1> send_msg: {action_req_c2s,6,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,6,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     44,89,111,117,32,116,114,121,32,116,111,32,99,104,97,110,
+                     103,101,32,102,105,103,117,114,101,32,116,111,32,116,104,
+                     101,32,99,117,114,114,101,110,116,32,111,110,101,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You try to change figure to the current one.">>
+1> send_msg: {action_req_c2s,2,undefined,undefined,0.402,0.606}
+1> send_msg: raw data=<<13,38,78,0,0,18,12,8,2,37,242,210,205,62,45,209,34,27,63>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,12,8,2,37,242,210,205,62,45,209,34,27,63,
+                     24,0>>
+1> recv_msg: {action_req_s2c,2,undefined,undefined,0.4020000100135803,
+                          0.6060000061988831}
+1> send_msg: {action_req_c2s,1,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,1,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,4,8,1,16,1,24,0>>
+1> recv_msg: {action_req_s2c,1,1,undefined,undefined,undefined}
+1> send_msg: {action_req_c2s,4,undefined,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,2,8,4>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,2,8,4,24,0>>
+1> recv_msg: {action_req_s2c,4,undefined,undefined,undefined,undefined}
+1> send_msg: {heartbeat_c2s}
+1> send_msg: raw data=<<13,34,78,0,0,18,0>>
+1> send_msg: {action_req_c2s,2,undefined,undefined,0.453,0.899}
+1> send_msg: raw data=<<13,38,78,0,0,18,12,8,2,37,158,239,231,62,45,221,36,102,63>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,12,8,2,37,158,239,231,62,45,221,36,102,63,
+                     24,0>>
+1> recv_msg: {action_req_s2c,2,undefined,undefined,0.453000009059906,
+                          0.8989999890327454}
+1> send_msg: {action_req_c2s,5,undefined,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,2,8,5>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,2,8,5,24,0>>
+1> recv_msg: {action_req_s2c,5,undefined,undefined,undefined,undefined}
+1> send_msg: {action_req_c2s,2,undefined,undefined,0.522,0.046}
+1> send_msg: raw data=<<13,38,78,0,0,18,12,8,2,37,203,161,5,63,45,127,106,60,61>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,12,8,2,37,203,161,5,63,45,127,106,60,61,
+                     24,0>>
+1> recv_msg: {action_req_s2c,2,undefined,undefined,0.5220000147819519,
+                          0.04600000008940697}
+1> send_msg: {action_req_c2s,3,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,3,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,4,8,3,16,1,24,0>>
+1> recv_msg: {action_req_s2c,3,1,undefined,undefined,undefined}
+1> send_msg: {action_req_c2s,2,undefined,undefined,0.325,0.099}
+1> send_msg: raw data=<<13,38,78,0,0,18,12,8,2,37,102,102,166,62,45,131,192,202,61>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,12,8,2,37,102,102,166,62,45,131,192,202,
+                     61,24,0>>
+1> recv_msg: {action_req_s2c,2,undefined,undefined,0.32499998807907104,
+                          0.0989999994635582}
+1> send_msg: {heartbeat_c2s}
+1> send_msg: raw data=<<13,34,78,0,0,18,0>>
+1> send_msg: {action_req_c2s,1,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,1,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     25,89,111,117,32,104,97,118,101,32,97,108,114,101,97,100,
+                     121,32,98,101,101,110,32,68,74,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You have already been DJ.">>
+1> send_msg: {action_req_c2s,1,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,1,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     25,89,111,117,32,104,97,118,101,32,97,108,114,101,97,100,
+                     121,32,98,101,101,110,32,68,74,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You have already been DJ.">>
+1> send_msg: {action_req_c2s,6,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,6,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     44,89,111,117,32,116,114,121,32,116,111,32,99,104,97,110,
+                     103,101,32,102,105,103,117,114,101,32,116,111,32,116,104,
+                     101,32,99,117,114,114,101,110,116,32,111,110,101,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You try to change figure to the current one.">>
+1> send_msg: {action_req_c2s,5,undefined,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,2,8,5>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,2,8,5,24,0>>
+1> recv_msg: {action_req_s2c,5,undefined,undefined,undefined,undefined}
+1> send_msg: {action_req_c2s,3,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,3,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     40,84,104,101,32,108,105,103,104,116,105,110,103,32,104,
+                     97,115,32,97,108,114,101,97,100,121,32,98,101,101,110,32,
+                     116,117,114,110,101,100,32,111,110,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"The lighting has already been turned on.">>
+1> send_msg: {heartbeat_c2s}
+1> send_msg: raw data=<<13,34,78,0,0,18,0>>
+1> send_msg: {action_req_c2s,6,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,6,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     44,89,111,117,32,116,114,121,32,116,111,32,99,104,97,110,
+                     103,101,32,102,105,103,117,114,101,32,116,111,32,116,104,
+                     101,32,99,117,114,114,101,110,116,32,111,110,101,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You try to change figure to the current one.">>
+1> send_msg: {action_req_c2s,3,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,3,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     40,84,104,101,32,108,105,103,104,116,105,110,103,32,104,
+                     97,115,32,97,108,114,101,97,100,121,32,98,101,101,110,32,
+                     116,117,114,110,101,100,32,111,110,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"The lighting has already been turned on.">>
+1> send_msg: {action_req_c2s,3,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,3,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     40,84,104,101,32,108,105,103,104,116,105,110,103,32,104,
+                     97,115,32,97,108,114,101,97,100,121,32,98,101,101,110,32,
+                     116,117,114,110,101,100,32,111,110,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"The lighting has already been turned on.">>
+1> send_msg: {action_req_c2s,2,undefined,undefined,0.163,0.999}
+1> send_msg: raw data=<<13,38,78,0,0,18,12,8,2,37,121,233,38,62,45,119,190,127,63>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,12,8,2,37,121,233,38,62,45,119,190,127,63,
+                     24,0>>
+1> recv_msg: {action_req_s2c,2,undefined,undefined,0.16300000250339508,
+                          0.9990000128746033}
+1> send_msg: {action_req_c2s,4,undefined,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,2,8,4>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,2,8,4,24,0>>
+1> recv_msg: {action_req_s2c,4,undefined,undefined,undefined,undefined}
+1> send_msg: {heartbeat_c2s}
+1> send_msg: raw data=<<13,34,78,0,0,18,0>>
+1> send_msg: {action_req_c2s,1,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,1,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     25,89,111,117,32,104,97,118,101,32,97,108,114,101,97,100,
+                     121,32,98,101,101,110,32,68,74,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You have already been DJ.">>
+1> send_msg: {action_req_c2s,4,undefined,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,2,8,4>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,2,8,4,24,0>>
+1> recv_msg: {action_req_s2c,4,undefined,undefined,undefined,undefined}
+1> send_msg: {action_req_c2s,2,undefined,undefined,0.369,0.361}
+1> send_msg: raw data=<<13,38,78,0,0,18,12,8,2,37,145,237,188,62,45,254,212,184,62>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,12,8,2,37,145,237,188,62,45,254,212,184,
+                     62,24,0>>
+1> recv_msg: {action_req_s2c,2,undefined,undefined,0.36899998784065247,
+                          0.3610000014305115}
+1> send_msg: {action_req_c2s,6,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,6,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     44,89,111,117,32,116,114,121,32,116,111,32,99,104,97,110,
+                     103,101,32,102,105,103,117,114,101,32,116,111,32,116,104,
+                     101,32,99,117,114,114,101,110,116,32,111,110,101,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You try to change figure to the current one.">>
+1> send_msg: {action_req_c2s,6,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,6,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     44,89,111,117,32,116,114,121,32,116,111,32,99,104,97,110,
+                     103,101,32,102,105,103,117,114,101,32,116,111,32,116,104,
+                     101,32,99,117,114,114,101,110,116,32,111,110,101,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You try to change figure to the current one.">>
+1> send_msg: {action_req_c2s,6,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,6,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     44,89,111,117,32,116,114,121,32,116,111,32,99,104,97,110,
+                     103,101,32,102,105,103,117,114,101,32,116,111,32,116,104,
+                     101,32,99,117,114,114,101,110,116,32,111,110,101,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You try to change figure to the current one.">>
+1> send_msg: {heartbeat_c2s}
+1> send_msg: raw data=<<13,34,78,0,0,18,0>>
+1> send_msg: {action_req_c2s,5,undefined,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,2,8,5>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,2,8,5,24,0>>
+1> recv_msg: {action_req_s2c,5,undefined,undefined,undefined,undefined}
+1> send_msg: {action_req_c2s,6,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,6,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     44,89,111,117,32,116,114,121,32,116,111,32,99,104,97,110,
+                     103,101,32,102,105,103,117,114,101,32,116,111,32,116,104,
+                     101,32,99,117,114,114,101,110,116,32,111,110,101,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You try to change figure to the current one.">>
+1> send_msg: {action_req_c2s,6,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,6,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     44,89,111,117,32,116,114,121,32,116,111,32,99,104,97,110,
+                     103,101,32,102,105,103,117,114,101,32,116,111,32,116,104,
+                     101,32,99,117,114,114,101,110,116,32,111,110,101,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You try to change figure to the current one.">>
+1> send_msg: {action_req_c2s,4,undefined,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,2,8,4>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,2,8,4,24,0>>
+1> recv_msg: {action_req_s2c,4,undefined,undefined,undefined,undefined}
+1> send_msg: {action_req_c2s,2,undefined,undefined,0.774,0.397}
+1> send_msg: raw data=<<13,38,78,0,0,18,12,8,2,37,221,36,70,63,45,150,67,203,62>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,12,8,2,37,221,36,70,63,45,150,67,203,62,
+                     24,0>>
+1> recv_msg: {action_req_s2c,2,undefined,undefined,0.7739999890327454,
+                          0.3970000147819519}
+1> send_msg: {heartbeat_c2s}
+1> send_msg: raw data=<<13,34,78,0,0,18,0>>
+1> send_msg: {action_req_c2s,4,undefined,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,2,8,4>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,2,8,4,24,0>>
+1> recv_msg: {action_req_s2c,4,undefined,undefined,undefined,undefined}
+1> send_msg: {action_req_c2s,6,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,6,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     44,89,111,117,32,116,114,121,32,116,111,32,99,104,97,110,
+                     103,101,32,102,105,103,117,114,101,32,116,111,32,116,104,
+                     101,32,99,117,114,114,101,110,116,32,111,110,101,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You try to change figure to the current one.">>
+1> send_msg: {action_req_c2s,5,undefined,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,2,8,5>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,2,8,5,24,0>>
+1> recv_msg: {action_req_s2c,5,undefined,undefined,undefined,undefined}
+1> send_msg: {action_req_c2s,2,undefined,undefined,0.46,0.491}
+1> send_msg: raw data=<<13,38,78,0,0,18,12,8,2,37,31,133,235,62,45,90,100,251,62>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,12,8,2,37,31,133,235,62,45,90,100,251,62,
+                     24,0>>
+1> recv_msg: {action_req_s2c,2,undefined,undefined,0.46000000834465027,
+                          0.4909999966621399}
+1> send_msg: {heartbeat_c2s}
+1> send_msg: raw data=<<13,34,78,0,0,18,0>>
+1> send_msg: {action_req_c2s,6,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,6,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     44,89,111,117,32,116,114,121,32,116,111,32,99,104,97,110,
+                     103,101,32,102,105,103,117,114,101,32,116,111,32,116,104,
+                     101,32,99,117,114,114,101,110,116,32,111,110,101,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You try to change figure to the current one.">>
+1> send_msg: {action_req_c2s,1,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,1,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     25,89,111,117,32,104,97,118,101,32,97,108,114,101,97,100,
+                     121,32,98,101,101,110,32,68,74,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You have already been DJ.">>
+1> send_msg: {action_req_c2s,2,undefined,undefined,0.602,0.966}
+1> send_msg: raw data=<<13,38,78,0,0,18,12,8,2,37,172,28,26,63,45,199,75,119,63>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,12,8,2,37,172,28,26,63,45,199,75,119,63,
+                     24,0>>
+1> recv_msg: {action_req_s2c,2,undefined,undefined,0.6019999980926514,
+                          0.9660000205039978}
+1> send_msg: {action_req_c2s,2,undefined,undefined,0.596,0.489}
+1> send_msg: raw data=<<13,38,78,0,0,18,12,8,2,37,117,147,24,63,45,53,94,250,62>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,12,8,2,37,117,147,24,63,45,53,94,250,62,
+                     24,0>>
+1> recv_msg: {action_req_s2c,2,undefined,undefined,0.5960000157356262,
+                          0.48899999260902405}
+1> send_msg: {heartbeat_c2s}
+1> send_msg: raw data=<<13,34,78,0,0,18,0>>
+1> send_msg: {action_req_c2s,4,undefined,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,2,8,4>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,2,8,4,24,0>>
+1> recv_msg: {action_req_s2c,4,undefined,undefined,undefined,undefined}
+1> send_msg: {action_req_c2s,2,undefined,undefined,0.608,0.832}
+1> send_msg: raw data=<<13,38,78,0,0,18,12,8,2,37,227,165,27,63,45,244,253,84,63>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,12,8,2,37,227,165,27,63,45,244,253,84,63,
+                     24,0>>
+1> recv_msg: {action_req_s2c,2,undefined,undefined,0.6079999804496765,
+                          0.8320000171661377}
+1> send_msg: {action_req_c2s,6,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,6,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     44,89,111,117,32,116,114,121,32,116,111,32,99,104,97,110,
+                     103,101,32,102,105,103,117,114,101,32,116,111,32,116,104,
+                     101,32,99,117,114,114,101,110,116,32,111,110,101,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You try to change figure to the current one.">>
+1> send_msg: {action_req_c2s,1,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,1,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     25,89,111,117,32,104,97,118,101,32,97,108,114,101,97,100,
+                     121,32,98,101,101,110,32,68,74,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You have already been DJ.">>
+1> send_msg: {action_req_c2s,3,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,3,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     40,84,104,101,32,108,105,103,104,116,105,110,103,32,104,
+                     97,115,32,97,108,114,101,97,100,121,32,98,101,101,110,32,
+                     116,117,114,110,101,100,32,111,110,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"The lighting has already been turned on.">>
+1> send_msg: {heartbeat_c2s}
+1> send_msg: raw data=<<13,34,78,0,0,18,0>>
+1> send_msg: {action_req_c2s,2,undefined,undefined,0.722,0.689}
+1> send_msg: raw data=<<13,38,78,0,0,18,12,8,2,37,254,212,56,63,45,78,98,48,63>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,12,8,2,37,254,212,56,63,45,78,98,48,63,24,
+                     0>>
+1> recv_msg: {action_req_s2c,2,undefined,undefined,0.722000002861023,
+                          0.6890000104904175}
+1> send_msg: {action_req_c2s,3,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,3,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     40,84,104,101,32,108,105,103,104,116,105,110,103,32,104,
+                     97,115,32,97,108,114,101,97,100,121,32,98,101,101,110,32,
+                     116,117,114,110,101,100,32,111,110,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"The lighting has already been turned on.">>
+1> send_msg: {action_req_c2s,5,undefined,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,2,8,5>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,2,8,5,24,0>>
+1> recv_msg: {action_req_s2c,5,undefined,undefined,undefined,undefined}
+1> send_msg: {action_req_c2s,3,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,3,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     40,84,104,101,32,108,105,103,104,116,105,110,103,32,104,
+                     97,115,32,97,108,114,101,97,100,121,32,98,101,101,110,32,
+                     116,117,114,110,101,100,32,111,110,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"The lighting has already been turned on.">>
+1> send_msg: {heartbeat_c2s}
+1> send_msg: raw data=<<13,34,78,0,0,18,0>>
+1> send_msg: {action_req_c2s,3,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,3,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     40,84,104,101,32,108,105,103,104,116,105,110,103,32,104,
+                     97,115,32,97,108,114,101,97,100,121,32,98,101,101,110,32,
+                     116,117,114,110,101,100,32,111,110,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"The lighting has already been turned on.">>
+1> send_msg: {action_req_c2s,3,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,3,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     40,84,104,101,32,108,105,103,104,116,105,110,103,32,104,
+                     97,115,32,97,108,114,101,97,100,121,32,98,101,101,110,32,
+                     116,117,114,110,101,100,32,111,110,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"The lighting has already been turned on.">>
+1> send_msg: {action_req_c2s,6,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,6,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     44,89,111,117,32,116,114,121,32,116,111,32,99,104,97,110,
+                     103,101,32,102,105,103,117,114,101,32,116,111,32,116,104,
+                     101,32,99,117,114,114,101,110,116,32,111,110,101,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You try to change figure to the current one.">>
+1> send_msg: {action_req_c2s,5,undefined,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,2,8,5>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,2,8,5,24,0>>
+1> recv_msg: {action_req_s2c,5,undefined,undefined,undefined,undefined}
+1> send_msg: {heartbeat_c2s}
+1> send_msg: raw data=<<13,34,78,0,0,18,0>>
+1> send_msg: {action_req_c2s,2,undefined,undefined,0.956,0.951}
+1> send_msg: raw data=<<13,38,78,0,0,18,12,8,2,37,106,188,116,63,45,188,116,115,63>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,12,8,2,37,106,188,116,63,45,188,116,115,
+                     63,24,0>>
+1> recv_msg: {action_req_s2c,2,undefined,undefined,0.9559999704360962,
+                          0.9509999752044678}
+1> send_msg: {action_req_c2s,6,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,6,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     44,89,111,117,32,116,114,121,32,116,111,32,99,104,97,110,
+                     103,101,32,102,105,103,117,114,101,32,116,111,32,116,104,
+                     101,32,99,117,114,114,101,110,116,32,111,110,101,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You try to change figure to the current one.">>
+1> send_msg: {action_req_c2s,5,undefined,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,2,8,5>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,2,8,5,24,0>>
+1> recv_msg: {action_req_s2c,5,undefined,undefined,undefined,undefined}
+1> send_msg: {action_req_c2s,3,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,3,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     40,84,104,101,32,108,105,103,104,116,105,110,103,32,104,
+                     97,115,32,97,108,114,101,97,100,121,32,98,101,101,110,32,
+                     116,117,114,110,101,100,32,111,110,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"The lighting has already been turned on.">>
+1> send_msg: {action_req_c2s,2,undefined,undefined,0.29,0.935}
+1> send_msg: raw data=<<13,38,78,0,0,18,12,8,2,37,225,122,148,62,45,41,92,111,63>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,12,8,2,37,225,122,148,62,45,41,92,111,63,
+                     24,0>>
+1> recv_msg: {action_req_s2c,2,undefined,undefined,0.28999999165534973,
+                          0.9350000023841858}
+1> send_msg: {action_req_c2s,2,undefined,undefined,0.777,0.233}
+1> send_msg: raw data=<<13,38,78,0,0,18,12,8,2,37,121,233,70,63,45,141,151,110,62>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,12,8,2,37,121,233,70,63,45,141,151,110,62,
+                     24,0>>
+1> recv_msg: {action_req_s2c,2,undefined,undefined,0.7770000100135803,
+                          0.2329999953508377}
+1> send_msg: {heartbeat_c2s}
+1> send_msg: raw data=<<13,34,78,0,0,18,0>>
+1> send_msg: {action_req_c2s,6,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,6,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     44,89,111,117,32,116,114,121,32,116,111,32,99,104,97,110,
+                     103,101,32,102,105,103,117,114,101,32,116,111,32,116,104,
+                     101,32,99,117,114,114,101,110,116,32,111,110,101,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You try to change figure to the current one.">>
+1> send_msg: {action_req_c2s,2,undefined,undefined,0.493,0.545}
+1> send_msg: raw data=<<13,38,78,0,0,18,12,8,2,37,127,106,252,62,45,31,133,11,63>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,12,8,2,37,127,106,252,62,45,31,133,11,63,
+                     24,0>>
+1> recv_msg: {action_req_s2c,2,undefined,undefined,0.49300000071525574,
+                          0.5450000166893005}
+1> send_msg: {action_req_c2s,4,undefined,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,2,8,4>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,2,8,4,24,0>>
+1> recv_msg: {action_req_s2c,4,undefined,undefined,undefined,undefined}
+1> send_msg: {action_req_c2s,6,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,6,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     44,89,111,117,32,116,114,121,32,116,111,32,99,104,97,110,
+                     103,101,32,102,105,103,117,114,101,32,116,111,32,116,104,
+                     101,32,99,117,114,114,101,110,116,32,111,110,101,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You try to change figure to the current one.">>
+1> send_msg: {heartbeat_c2s}
+1> send_msg: raw data=<<13,34,78,0,0,18,0>>
+1> send_msg: {action_req_c2s,1,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,1,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     25,89,111,117,32,104,97,118,101,32,97,108,114,101,97,100,
+                     121,32,98,101,101,110,32,68,74,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You have already been DJ.">>
+1> send_msg: {action_req_c2s,2,undefined,undefined,0.862,0.619}
+1> send_msg: raw data=<<13,38,78,0,0,18,12,8,2,37,8,172,92,63,45,201,118,30,63>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,12,8,2,37,8,172,92,63,45,201,118,30,63,24,
+                     0>>
+1> recv_msg: {action_req_s2c,2,undefined,undefined,0.8619999885559082,
+                          0.6190000176429749}
+1> send_msg: {action_req_c2s,2,undefined,undefined,0.813,0.088}
+1> send_msg: raw data=<<13,38,78,0,0,18,12,8,2,37,197,32,80,63,45,88,57,180,61>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,12,8,2,37,197,32,80,63,45,88,57,180,61,24,
+                     0>>
+1> recv_msg: {action_req_s2c,2,undefined,undefined,0.8130000233650208,
+                          0.08799999952316284}
+1> send_msg: {action_req_c2s,3,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,3,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     40,84,104,101,32,108,105,103,104,116,105,110,103,32,104,
+                     97,115,32,97,108,114,101,97,100,121,32,98,101,101,110,32,
+                     116,117,114,110,101,100,32,111,110,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"The lighting has already been turned on.">>
+1> send_msg: {action_req_c2s,1,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,1,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     25,89,111,117,32,104,97,118,101,32,97,108,114,101,97,100,
+                     121,32,98,101,101,110,32,68,74,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You have already been DJ.">>
+1> send_msg: {heartbeat_c2s}
+1> send_msg: raw data=<<13,34,78,0,0,18,0>>
+1> send_msg: {action_req_c2s,4,undefined,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,2,8,4>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,2,8,4,24,0>>
+1> recv_msg: {action_req_s2c,4,undefined,undefined,undefined,undefined}
+1> send_msg: {action_req_c2s,1,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,1,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     25,89,111,117,32,104,97,118,101,32,97,108,114,101,97,100,
+                     121,32,98,101,101,110,32,68,74,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You have already been DJ.">>
+1> send_msg: {action_req_c2s,3,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,3,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     40,84,104,101,32,108,105,103,104,116,105,110,103,32,104,
+                     97,115,32,97,108,114,101,97,100,121,32,98,101,101,110,32,
+                     116,117,114,110,101,100,32,111,110,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"The lighting has already been turned on.">>
+1> send_msg: {action_req_c2s,4,undefined,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,2,8,4>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,2,8,4,24,0>>
+1> recv_msg: {action_req_s2c,4,undefined,undefined,undefined,undefined}
+1> send_msg: {heartbeat_c2s}
+1> send_msg: raw data=<<13,34,78,0,0,18,0>>
+1> send_msg: {action_req_c2s,2,undefined,undefined,0.668,0.438}
+1> send_msg: raw data=<<13,38,78,0,0,18,12,8,2,37,12,2,43,63,45,137,65,224,62>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,12,8,2,37,12,2,43,63,45,137,65,224,62,24,0>>
+1> recv_msg: {action_req_s2c,2,undefined,undefined,0.6679999828338623,
+                          0.43799999356269836}
+1> send_msg: {action_req_c2s,6,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,6,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     44,89,111,117,32,116,114,121,32,116,111,32,99,104,97,110,
+                     103,101,32,102,105,103,117,114,101,32,116,111,32,116,104,
+                     101,32,99,117,114,114,101,110,116,32,111,110,101,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You try to change figure to the current one.">>
+1> send_msg: {action_req_c2s,2,undefined,undefined,0.799,0.671}
+1> send_msg: raw data=<<13,38,78,0,0,18,12,8,2,37,68,139,76,63,45,168,198,43,63>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,12,8,2,37,68,139,76,63,45,168,198,43,63,
+                     24,0>>
+1> recv_msg: {action_req_s2c,2,undefined,undefined,0.7990000247955322,
+                          0.6710000038146973}
+1> send_msg: {action_req_c2s,1,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,1,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     25,89,111,117,32,104,97,118,101,32,97,108,114,101,97,100,
+                     121,32,98,101,101,110,32,68,74,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You have already been DJ.">>
+1> send_msg: {heartbeat_c2s}
+1> send_msg: raw data=<<13,34,78,0,0,18,0>>
+1> send_msg: {action_req_c2s,1,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,1,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     25,89,111,117,32,104,97,118,101,32,97,108,114,101,97,100,
+                     121,32,98,101,101,110,32,68,74,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You have already been DJ.">>
+1> send_msg: {action_req_c2s,2,undefined,undefined,0.625,0.762}
+1> send_msg: raw data=<<13,38,78,0,0,18,12,8,2,37,0,0,32,63,45,111,18,67,63>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,12,8,2,37,0,0,32,63,45,111,18,67,63,24,0>>
+1> recv_msg: {action_req_s2c,2,undefined,undefined,0.625,0.7620000243186951}
+1> send_msg: {action_req_c2s,2,undefined,undefined,0.815,0.249}
+1> send_msg: raw data=<<13,38,78,0,0,18,12,8,2,37,215,163,80,63,45,219,249,126,62>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,12,8,2,37,215,163,80,63,45,219,249,126,62,
+                     24,0>>
+1> recv_msg: {action_req_s2c,2,undefined,undefined,0.8149999976158142,
+                          0.24899999797344208}
+1> send_msg: {action_req_c2s,3,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,3,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     40,84,104,101,32,108,105,103,104,116,105,110,103,32,104,
+                     97,115,32,97,108,114,101,97,100,121,32,98,101,101,110,32,
+                     116,117,114,110,101,100,32,111,110,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"The lighting has already been turned on.">>
+1> send_msg: {action_req_c2s,4,undefined,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,2,8,4>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,2,8,4,24,0>>
+1> recv_msg: {action_req_s2c,4,undefined,undefined,undefined,undefined}
+1> send_msg: {action_req_c2s,1,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,1,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     25,89,111,117,32,104,97,118,101,32,97,108,114,101,97,100,
+                     121,32,98,101,101,110,32,68,74,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You have already been DJ.">>
+1> send_msg: {heartbeat_c2s}
+1> send_msg: raw data=<<13,34,78,0,0,18,0>>
+1> send_msg: {action_req_c2s,6,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,6,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     44,89,111,117,32,116,114,121,32,116,111,32,99,104,97,110,
+                     103,101,32,102,105,103,117,114,101,32,116,111,32,116,104,
+                     101,32,99,117,114,114,101,110,116,32,111,110,101,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You try to change figure to the current one.">>
+1> send_msg: {action_req_c2s,3,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,3,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     40,84,104,101,32,108,105,103,104,116,105,110,103,32,104,
+                     97,115,32,97,108,114,101,97,100,121,32,98,101,101,110,32,
+                     116,117,114,110,101,100,32,111,110,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"The lighting has already been turned on.">>
+1> send_msg: {action_req_c2s,5,undefined,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,2,8,5>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,2,8,5,24,0>>
+1> recv_msg: {action_req_s2c,5,undefined,undefined,undefined,undefined}
+1> send_msg: {heartbeat_c2s}
+1> send_msg: raw data=<<13,34,78,0,0,18,0>>
+1> send_msg: {action_req_c2s,6,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,6,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     44,89,111,117,32,116,114,121,32,116,111,32,99,104,97,110,
+                     103,101,32,102,105,103,117,114,101,32,116,111,32,116,104,
+                     101,32,99,117,114,114,101,110,116,32,111,110,101,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You try to change figure to the current one.">>
+1> send_msg: {action_req_c2s,3,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,3,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     40,84,104,101,32,108,105,103,104,116,105,110,103,32,104,
+                     97,115,32,97,108,114,101,97,100,121,32,98,101,101,110,32,
+                     116,117,114,110,101,100,32,111,110,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"The lighting has already been turned on.">>
+1> send_msg: {action_req_c2s,1,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,1,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     25,89,111,117,32,104,97,118,101,32,97,108,114,101,97,100,
+                     121,32,98,101,101,110,32,68,74,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You have already been DJ.">>
+1> send_msg: {action_req_c2s,4,undefined,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,2,8,4>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,2,8,4,24,0>>
+1> recv_msg: {action_req_s2c,4,undefined,undefined,undefined,undefined}
+1> send_msg: {action_req_c2s,5,undefined,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,2,8,5>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,2,8,5,24,0>>
+1> recv_msg: {action_req_s2c,5,undefined,undefined,undefined,undefined}
+1> send_msg: {heartbeat_c2s}
+1> send_msg: raw data=<<13,34,78,0,0,18,0>>
+1> send_msg: {action_req_c2s,2,undefined,undefined,0.198,0.692}
+1> send_msg: raw data=<<13,38,78,0,0,18,12,8,2,37,131,192,74,62,45,233,38,49,63>>
+1> recv_msg: raw data=<<13,39,78,0,0,18,12,8,2,37,131,192,74,62,45,233,38,49,63,
+                     24,0>>
+1> recv_msg: {action_req_s2c,2,undefined,undefined,0.1979999989271164,
+                          0.6919999718666077}
+1> send_msg: {action_req_c2s,6,1,undefined,undefined,undefined}
+1> send_msg: raw data=<<13,38,78,0,0,18,4,8,6,16,1>>
+1> recv_msg: raw data=<<13,39,78,0,0,24,158,248,255,255,255,255,255,255,255,1,34,
+                     44,89,111,117,32,116,114,121,32,116,111,32,99,104,97,110,
+                     103,101,32,102,105,103,117,114,101,32,116,111,32,116,104,
+                     101,32,99,117,114,114,101,110,116,32,111,110,101,46>>
+1> recv_msg logic error msg: msg_id=20007, err_code=-994, err_msg=<<"You try to change figure to the current one.">>
+1> 
+BREAK: (a)bort (c)ontinue (p)roc info (i)nfo (l)oaded
+       (v)ersion (k)ill (D)b-tables (d)istribution

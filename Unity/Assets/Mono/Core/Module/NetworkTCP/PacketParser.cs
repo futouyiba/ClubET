@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Net;
 
 namespace ET
 {
@@ -58,7 +59,7 @@ namespace ET
 
 							this.buffer.Read(this.cache, 0, OuterPacketSizeLength);
 
-							this.packetSize = BitConverter.ToUInt16(this.cache, 0);
+							this.packetSize = IPAddress.NetworkToHostOrder( BitConverter.ToInt32(this.cache, 0));
 							if (this.packetSize < Packet.MinPacketSize)
 							{
 								throw new Exception($"recv packet size error, 可能是外网探测端口: {this.packetSize}");
@@ -86,7 +87,7 @@ namespace ET
 						}
 						else
 						{
-							memoryStream.Seek(Packet.OpcodeLength, SeekOrigin.Begin);
+							memoryStream.Seek(0, SeekOrigin.Begin);
 						}
 
 						this.state = ParserState.PacketSize;

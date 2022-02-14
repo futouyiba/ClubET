@@ -27,7 +27,7 @@ namespace ET
         {
             if (GlobalDefine.DevelopMode)
             {
-                return "127.0.0.1:10002";
+                return "82.157.8.127:8800";
             }
             else
             {

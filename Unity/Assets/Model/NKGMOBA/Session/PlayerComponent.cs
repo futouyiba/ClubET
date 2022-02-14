@@ -4,6 +4,7 @@
 	{
 		public Session GateSession;
 		public Session LobbySession;
+		public Session RealmSession;
 		public Room BelongToRoom;
 
 		/// <summary>

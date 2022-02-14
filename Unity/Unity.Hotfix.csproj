@@ -63,6 +63,7 @@
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\NPBehave\TheDataContainsAction\NP_SyncNPBBValue_BoolAction.cs" />
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\M2C_CancelAttackHandler.cs" />
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\SkillSystem\BuffSystem\SendBuffInfoToClientBuffSystem.cs" />
+     <Compile Include="Assets\Hotfix\NKGMOBA\Unit\register_user_s2c_hander.cs" />
      <Compile Include="Assets\Hotfix\Module\Numeric\NumericChangeEvent_NotifyWatcher.cs" />
      <Compile Include="Assets\Hotfix\Core\Scene\ZoneSceneManagerComponentSystem.cs" />
      <Compile Include="Assets\Hotfix\Core\Scene\ZoneSceneFlagComponentSystem.cs" />
