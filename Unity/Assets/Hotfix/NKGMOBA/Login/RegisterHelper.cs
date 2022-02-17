@@ -6,21 +6,26 @@ using System.Threading.Tasks;
 
 namespace ET
 {
-    public class RegisteHelper
-    {
-        static string DEVICE_PRODUCT_ID = "DEVICE_PRODUCT_ID";
-        static string DEVICE_MODEL = "DEVICE_MODEL";
-        // static string USER_ID = "USER_ID";
-        private static int registerPostfix = 40;
-        static string CloudIp = "82.157.8.127";
-        static int port = 8800;
+    public class RegisterHelper
+    { 
+        public static string DEVICE_PRODUCT_ID = "DEVICE_PRODUCT_ID";
+        public static string DEVICE_MODEL = "DEVICE_MODEL";
+        public static string USER_ID = "USER_ID";
+        public static int registerPostfix = 40;
+        public static string CloudIp = "82.157.8.127";
+        public static int port = 8800;
+        public static Entity fuiComponent;
         public static async ETTask Register(Entity fuiComponent, string address, string account, string password)
         {
             try
             {
-                await RegisteHelper.Connect(fuiComponent, address);
+                if (fuiComponent!=null)
+                {
+                    RegisterHelper.fuiComponent = fuiComponent;
+                }
+                await RegisterHelper.Connect(fuiComponent, "");
                 
-                Scene zoneScene = fuiComponent.DomainScene();
+                Scene zoneScene =RegisterHelper. fuiComponent.DomainScene();
 
                 if (account != "")
                 {

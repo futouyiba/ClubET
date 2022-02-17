@@ -11,5 +11,31 @@ namespace ET
 		 public const ushort register_user_s2c = 10001;
 		 public const ushort get_transfer_endpoint_c2s = 10002;
 		 public const ushort get_transfer_endpoint_s2c = 10003;
+		 public const ushort authenticate_c2s = 20000;
+		 public const ushort authenticate_s2c = 20001;
+		 public const ushort heartbeat_c2s = 20002;
+		 public const ushort all_sync_s2c = 20003;
+		 public const ushort player_enter_s2c = 20004;
+		 public const ushort player_leave_s2c = 20005;
+		 public const ushort action_req_c2s = 20006;
+		 public const ushort action_req_s2c = 20007;
+		 public const ushort action_syn_s2c = 20008;
+	}
+
+	class Beixuan
+	{
+		public const ushort register_user_c2s = 10000;
+		public const ushort register_user_s2c = 10001;
+		public const ushort get_transfer_endpoint_c2s = 10002;
+		public const ushort get_transfer_endpoint_s2c = 10003;
+		public const ushort authenticate_c2s = 20000;
+		public const ushort authenticate_s2c = 20001;
+		public const ushort heartbeat_c2s = 20002;
+		public const ushort all_sync_s2c = 20003;
+		public const ushort player_enter_s2c = 20004;
+		public const ushort player_leave_s2c = 20005;
+		public const ushort action_req_c2s = 20006;
+		public const ushort action_req_s2c = 20007;
+		public const ushort action_syn_s2c = 20008;
 	}
 }

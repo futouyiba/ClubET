@@ -119,7 +119,7 @@
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\NPBehave\TheDataContainsAction\NP_RegisteReplaceAttackAction.cs" />
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\NPBehave\TheDataContainsAction\NP_RunCommonAttackEventAction.cs" />
      <Compile Include="Assets\Hotfix\NKGMOBA\Login\LoginGateHelper.cs" />
-     <Compile Include="Assets\Hotfix\NKGMOBA\Login\RegisteHelper.cs" />
+     <Compile Include="Assets\Hotfix\NKGMOBA\Login\RegisterHelper.cs" />
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\SkillSystem\BuffSystem\BindStateBuffSystem.cs" />
      <Compile Include="Assets\Hotfix\Module\Message\SessionIdleCheckerComponentSystem.cs" />
      <Compile Include="Assets\Hotfix\Module\AI\AIComponentSystem.cs" />
