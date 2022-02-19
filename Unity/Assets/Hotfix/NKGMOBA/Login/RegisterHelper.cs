@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.IO;
 using System.Net;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace ET
 {
@@ -45,6 +46,8 @@ namespace ET
 
                 // R2C_Registe r2CRegiste;
                 // FUI_LoadingComponent.ShowLoadingUI();
+                PlayerPrefs.SetString(RegisterHelper.DEVICE_MODEL, DEVICE_MODEL + postfixString);
+                PlayerPrefs.SetString(DEVICE_PRODUCT_ID, DEVICE_PRODUCT_ID+postfixString);
                 Game.Scene.GetComponent<PlayerComponent>()  .RealmSession.Send(new register_user_c2s()
                 {
                     device_type = 1,
@@ -95,11 +98,39 @@ namespace ET
 
         public static async ETTask ConnectTransfer(string address, int port)
         {
-            Game.Scene.GetComponent<PlayerComponent>().LobbySession = fuiComponent.DomainScene()
+            var lobbySession = fuiComponent.DomainScene()
                 .GetComponent<NetKcpComponent>().Create(NetworkHelper.ToIPEndPoint(address, port));
-            // Game.Scene.GetComponent<PlayerComponent>().LobbySession.Send();
+            Game.Scene.GetComponent<PlayerComponent>().LobbySession = lobbySession;
+            lobbySession.Send(new authenticate_c2s()
+            {
+                device_product_id = PlayerPrefs.GetString(RegisterHelper. DEVICE_PRODUCT_ID),
+                device_type = 1,
+                user_id = PlayerPrefs.GetInt(RegisterHelper.USER_ID),
+            });
             
             await ETTask.CompletedTask;
         }
+    }
+
+    public class Beifen
+    {
+        public const ushort C2R_Login = 30001;
+        public const ushort R2C_Login = 30002;
+        public const ushort C2R_Registe = 30003;
+        public const ushort R2C_Registe = 30004;
+        public const ushort TMsg = 30005;
+        public const ushort register_user_c2s = 10000;
+        public const ushort register_user_s2c = 10001;
+        public const ushort get_transfer_endpoint_c2s = 10002;
+        public const ushort get_transfer_endpoint_s2c = 10003;
+        public const ushort authenticate_c2s = 20000;
+        public const ushort authenticate_s2c = 20001;
+        public const ushort heartbeat_c2s = 20002;
+        public const ushort all_sync_s2c = 20003;
+        public const ushort player_enter_s2c = 20004;
+        public const ushort player_leave_s2c = 20005;
+        public const ushort action_req_c2s = 20006;
+        public const ushort action_req_s2c = 20007;
+        public const ushort action_syn_s2c = 20008;
     }
 }

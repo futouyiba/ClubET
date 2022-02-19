@@ -23,38 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1715052-b88e-4a65-9b40-1aa413711389" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Hotfix/NKGMOBA/Unit/get_transfer_endpoint_s2c_handler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Hotfix/NKGMOBA/Unit/get_transfer_endpoint_s2c_handler.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Animancer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Animancer.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hotfix/Module/Message/MessageDispatcherComponentSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hotfix/Module/Message/MessageDispatcherComponentSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hotfix/Module/MessageOuter/OuterMessageDispatcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hotfix/Module/MessageOuter/OuterMessageDispatcher.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Hotfix/NKGMOBA/Login/RegisterHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hotfix/NKGMOBA/Login/RegisterHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hotfix/NKGMOBA/Unit/register_user_s2c_hander.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hotfix/NKGMOBA/Unit/register_user_s2c_hander.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Model/Generate/Message/OuterMessage_Realm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Model/Generate/Message/OuterMessage_Realm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model/Generate/Message/OuterOpcode_Gate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Model/Generate/Message/OuterOpcode_Gate.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Model/Generate/Message/OuterOpcode_Realm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Model/Generate/Message/OuterOpcode_Realm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model/Module/Message/AMHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Model/Module/Message/AMHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model/Module/Message/IMHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Model/Module/Message/IMHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model/Module/Message/MessageDispatcherComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Model/Module/Message/MessageDispatcherComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Res/Code/Hotfix.dll.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/Code/Hotfix.dll.bytes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Res/Code/Hotfix.pdb.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/Code/Hotfix.pdb.bytes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Res/Code/Model.dll.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/Code/Model.dll.bytes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Res/Code/Model.pdb.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/Code/Model.pdb.bytes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IngameDebugConsole.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/IngameDebugConsole.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IngameDebugConsole.Runtime.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/IngameDebugConsole.Runtime.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NodeGraphProcessor.Examples.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NodeGraphProcessor.Examples.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sirenix.OdinInspector.CompatibilityLayer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Sirenix.OdinInspector.CompatibilityLayer.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.Hotfix.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.Hotfix.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.Model.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.Model.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.ThirdParty.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.ThirdParty.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XAsset.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/XAsset.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XAsset.Runtime.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/XAsset.Runtime.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.alelievr.NodeGraphProcessor.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/com.alelievr.NodeGraphProcessor.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.alelievr.NodeGraphProcessor.Runtime.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/com.alelievr.NodeGraphProcessor.Runtime.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +52,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695d1cc93cca45069c528c15c9fdd7493e2800/03/7433270b/MemoryStream.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.8/Runtime/Utilities/IPropertyCollector.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695d1cc93cca45069c528c15c9fdd7493e2800/a4/26ae2031/ValueTuple`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695d1cc93cca45069c528c15c9fdd7493e2800/b9/ba261cec/Array.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/OtherUilityTools/CreateMatFromFileOrFolder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.29/UnityEditor.TestRunner/TestLaunchers/RuntimeTestLauncherBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/EventSystem/InputModuleTests/DragCallbackCheck.cs" root0="SKIP_HIGHLIGHTING" />
@@ -109,12 +87,15 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/RiderScriptEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Editor/TMP_FontAsset_CreationMenu.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/EventSystem/EventTriggerEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@10.8.1/Editor/Volume/VolumeComponentProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/UnitTesting/CallbackInitializer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/RectMask2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@10.8.1/Runtime/Textures/BufferedRTHandleSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Mono/Core/TypeDict/MultiDictionary.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@1.1.0/Unity.Mathematics/bool2x3.gen.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualeffectgraph@10.8.1/Runtime/Utilities/PropertyBinding/Implementation/VFXInputButtonBinder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.8/Runtime/Activation/ActivationPlayableAsset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
@@ -122,8 +103,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/B2S_MapColliderExport/B2S_MapColliderDrawer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/Canvas/CanvasElementsMaintainValidPositionsWhenCameraOrthoSizeIsZero.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Graphic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b481dabae1f443869a630698684f35e713c200/2c/da51c560/PlayerPrefs.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Layout/VerticalLayoutGroupTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.8/Editor/Signals/TreeView/SignalReceiverTreeView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b481dabae1f443869a630698684f35e713c200/cf/f5e4b52f/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@1.1.0/Unity.Mathematics/math_unity_conversion.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Editor/TMP_EditorUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.8/Editor/Window/TimelineWindow_TrackGui.cs" root0="SKIP_HIGHLIGHTING" />
@@ -145,6 +129,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@1.1.0/Unity.Mathematics/Noise/noise4D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.8/Editor/Manipulators/Sequence/EaseClip.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/ProjectGeneration/ProjectGeneration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695d1cc93cca45069c528c15c9fdd7493e2800/54/da0e78d6/ObjectEqualityComparer`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@1.1.0/Tests/Tests/Shared/TestBitmanipulation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ffa034a770a74dbdb593b57dca0e7c026400/4b/7ecc2979/Command.cs" root0="SKIP_HIGHLIGHTING" />
@@ -153,6 +138,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.8/Runtime/AssetUpgrade/AnimationPlayableAssetUpgrade.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.8/Editor/Signals/SignalEventDrawer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0463b2ef957545c0a51b42f372cd4fbb29fa00/fa/29d633bc/Socket.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@10.8.1/Runtime/Debugging/DebugUpdater.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695d1cc93cca45069c528c15c9fdd7493e2800/73/5143e31a/RuntimeTypeHandle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Editor/TMP_BaseEditorPanel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.8/Editor/TimelineUtility.cs" root0="SKIP_HIGHLIGHTING" />
@@ -161,6 +147,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695d1cc93cca45069c528c15c9fdd7493e2800/17/2125a508/IntPtr.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Layout/ContentSizeFitterTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/351e49e2a5bf4fd6beabb458ce2255f3ff600/f8/58f4d431/HashSet`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695d1cc93cca45069c528c15c9fdd7493e2800/59/824dcbfb/Environment.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695d1cc93cca45069c528c15c9fdd7493e2800/ca/ad3754b9/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695d1cc93cca45069c528c15c9fdd7493e2800/d1/994e5574/SystemException.cs" root0="SKIP_HIGHLIGHTING" />
@@ -338,7 +325,7 @@
       <workItem from="1644689516330" duration="11304000" />
       <workItem from="1644781358512" duration="24078000" />
       <workItem from="1644908155182" duration="22771000" />
-      <workItem from="1645266617576" duration="7210000" />
+      <workItem from="1645266617576" duration="13074000" />
     </task>
     <servers />
   </component>
@@ -409,19 +396,6 @@
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Mono/Core/Module/NetworkTCP/TChannel.cs</url>
-          <line>317</line>
-          <properties documentPath="C:\Users\futou\Documents\NKGMobaBasedOnET\Unity\Assets\Mono\Core\Module\NetworkTCP\TChannel.cs" initialLine="317" containingFunctionPresentation="method 'StartSend'">
-            <startOffsets>
-              <option value="7073" />
-            </startOffsets>
-            <endOffsets>
-              <option value="7095" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Mono/Core/Module/NetworkTCP/TChannel.cs</url>
           <line>359</line>
           <properties documentPath="C:\Users\futou\Documents\NKGMobaBasedOnET\Unity\Assets\Mono\Core\Module\NetworkTCP\TChannel.cs" initialLine="359" containingFunctionPresentation="method 'HandleSend'">
             <startOffsets>
@@ -448,7 +422,7 @@
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Hotfix/NKGMOBA/Login/RegisterHelper.cs</url>
-          <line>51</line>
+          <line>54</line>
           <properties documentPath="C:\Users\futou\Documents\NKGMobaBasedOnET\Unity\Assets\Hotfix\NKGMOBA\Login\RegisteHelper.cs" initialLine="50" containingFunctionPresentation="method 'Register'" />
           <option name="timeStamp" value="33" />
         </line-breakpoint>
@@ -467,16 +441,29 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Hotfix/NKGMOBA/Login/RegisterHelper.cs</url>
-          <line>97</line>
-          <properties documentPath="C:\Users\futou\Documents\NKGMobaBasedOnET\Unity\Assets\Hotfix\NKGMOBA\Login\RegisterHelper.cs" initialLine="97" containingFunctionPresentation="method 'ConnectTransfer'">
+          <line>103</line>
+          <properties documentPath="C:\Users\futou\Documents\NKGMobaBasedOnET\Unity\Assets\Hotfix\NKGMOBA\Login\RegisterHelper.cs" initialLine="103" containingFunctionPresentation="method 'ConnectTransfer'">
             <startOffsets>
-              <option value="4160" />
+              <option value="4610" />
             </startOffsets>
             <endOffsets>
-              <option value="4344" />
+              <option value="4877" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="46" />
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Mono/Core/Module/NetworkTCP/TChannel.cs</url>
+          <line>317</line>
+          <properties documentPath="C:\Users\futou\Documents\NKGMobaBasedOnET\Unity\Assets\Mono\Core\Module\NetworkTCP\TChannel.cs" initialLine="317" containingFunctionPresentation="method 'StartSend'">
+            <startOffsets>
+              <option value="7073" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7095" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="48" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
