@@ -79,8 +79,6 @@ namespace ET
             {
                 FUI_LoadingComponent.HideLoadingUI();
             }
-
-
         }
         public static async ETTask Connect(Entity fuiComponent, string address)
         {
@@ -88,10 +86,20 @@ namespace ET
             var playerComponent = Game.Scene.GetComponent<PlayerComponent>();
             if (playerComponent.RealmSession==null || playerComponent.RealmSession.IsDisposed)
             {
+                // playerComponent.RealmSession = Game.Scene.GetComponent<NetKcpComponent>().Create(selectorEndpoint);
                 playerComponent.RealmSession = fuiComponent.DomainScene() .GetComponent<NetKcpComponent>().Create(selectorEndpoint);
             }
 
             await Task.CompletedTask;
+        }
+
+        public static async ETTask ConnectTransfer(string address, int port)
+        {
+            Game.Scene.GetComponent<PlayerComponent>().LobbySession = fuiComponent.DomainScene()
+                .GetComponent<NetKcpComponent>().Create(NetworkHelper.ToIPEndPoint(address, port));
+            // Game.Scene.GetComponent<PlayerComponent>().LobbySession.Send();
+            
+            await ETTask.CompletedTask;
         }
     }
 }

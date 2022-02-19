@@ -27,28 +27,28 @@ namespace ET
             {
                 message = ProtobufHelper.FromBytes(type, tMsg.body, 0, tMsg.body.Length);
                 OpcodeHelper.LogMsg(session.DomainZone(), opcode, message);
-
             }
 
-            if (tMsg.error_code !=0)
-            {
-                message = null;
-            }
             // object message = MessageSerializeHelper.DeserializeFrom(opcode, type, memoryStream);
 
             if (TimeHelper.ClientFrameTime() - this.lastMessageTime > 3000)
             {
                 Log.Info($"可能导致卡死的消息: {this.LastMessage}");
             }
-
             this.lastMessageTime = TimeHelper.ClientFrameTime();
             this.LastMessage = message;
+            if (tMsg.error_code !=0)
+            {
+                MessageDispatcherComponent.Instance.HandleError(session,opcode,tMsg.error_code, message);
+                return;
+            }
             
             if (message is IResponse response)
             {
                 session.OnRead((ushort)opcode, response);
                 return;
             }
+
 
             // 普通消息或者是Rpc请求消息
             MessageDispatcherComponent.Instance.Handle(session, opcode, message);

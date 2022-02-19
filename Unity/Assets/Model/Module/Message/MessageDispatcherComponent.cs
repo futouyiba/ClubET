@@ -13,6 +13,6 @@ namespace ET
             set;
         }
 
-        public readonly Dictionary<ushort, List<IMHandler>> Handlers = new Dictionary<ushort, List<IMHandler>>();
+        public readonly Dictionary<ushort, List<IClubHandler>> Handlers = new Dictionary<ushort, List<IClubHandler>>();
     }
 }

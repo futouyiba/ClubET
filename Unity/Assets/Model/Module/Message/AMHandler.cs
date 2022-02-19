@@ -44,11 +44,11 @@ namespace ET
         public void Handle(Session session, object msg)
         {
             Message message = msg as Message;
-            // if (message == null)
-            // {
-            //     Log.Error($"消息类型转换错误: {msg.GetType().Name} to {typeof (Message).Name}");
-            //     return;
-            // }
+            if (message == null)
+            {
+                Log.Error($"消息类型转换错误: {msg.GetType().Name} to {typeof (Message).Name}");
+                return;
+            }
 
             if (session.IsDisposed)
             {
@@ -59,10 +59,7 @@ namespace ET
             this.Run(session, message).Coroutine();
         }
 
-        public void Handle(Session session, int errorCode, object innerMessage)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract ETVoid HandleError(Session session, int errorCode, object innerMessage);
 
         public Type GetMessageType()
         {

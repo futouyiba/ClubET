@@ -13,11 +13,8 @@ namespace ET
         Type GetResponseType();
     }
 
-    public interface IClubHandler
+    public interface IClubHandler:IMHandler
     {
-        void Handle(Session session, int errorCode, object innerMessage);
-        Type GetMessageType();
-
-        Type GetResponseType();
+        ETVoid HandleError(Session session, int errorCode, object innerMessage);
     }
 }
