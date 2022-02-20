@@ -45,10 +45,10 @@ namespace ET
 
             foreach (Type type in types)
             {
-                IMHandler iMHandler = Activator.CreateInstance(type) as IMHandler;
+                IClubHandler iMHandler = Activator.CreateInstance(type) as IClubHandler;
                 if (iMHandler == null)
                 {
-                    Log.Error($"message handle {type.Name} 需要继承 IMHandler");
+                    Log.Error($"message handle {type.Name} 需要继承 IClubHandler");
                     continue;
                 }
 
@@ -64,11 +64,11 @@ namespace ET
             }
         }
 
-        public static void RegisterHandler(this MessageDispatcherComponent self, ushort opcode, IMHandler handler)
+        public static void RegisterHandler(this MessageDispatcherComponent self, ushort opcode, IClubHandler handler)
         {
             if (!self.Handlers.ContainsKey(opcode))
             {
-                self.Handlers.Add(opcode, new List<IMHandler>());
+                self.Handlers.Add(opcode, new List<IClubHandler>());
             }
 
             self.Handlers[opcode].Add(handler);
@@ -76,18 +76,38 @@ namespace ET
 
         public static void Handle(this MessageDispatcherComponent self, Session session, ushort opcode, object message)
         {
-            List<IMHandler> actions;
-            if (!self.Handlers.TryGetValue(opcode, out actions))
+            if (!self.Handlers.TryGetValue(opcode, out var actions))
             {
                 Log.Error($"消息没有处理: {opcode} {message.GetType()} {message}");
                 return;
             }
 
-            foreach (IMHandler ev in actions)
+            foreach (IClubHandler ev in actions)
             {
                 try
                 {
                     ev.Handle(session, message);
+                }
+                catch (Exception e)
+                {
+                    Log.Error(e);
+                }
+            }
+        }
+        
+        public static void HandleError(this MessageDispatcherComponent self, Session session, ushort opcode, int errorCode, object message)
+        {
+            if (!self.Handlers.TryGetValue(opcode, out var actions))
+            {
+                Log.Error($"消息没有处理: {opcode} {message.GetType()} {message}");
+                return;
+            }
+
+            foreach (IClubHandler ev in actions)
+            {
+                try
+                {
+                    ev.HandleError(session, errorCode, message);
                 }
                 catch (Exception e)
                 {

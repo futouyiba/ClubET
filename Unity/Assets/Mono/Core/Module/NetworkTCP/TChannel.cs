@@ -139,9 +139,9 @@ namespace ET
 				}
 				case ServiceType.Outer:
 				{
-					ushort messageSize = (ushort) (stream.Length - stream.Position);
+					var messageSize = (int) (stream.Length - stream.Position);
 
-					this.sendCache.WriteTo(0, messageSize);
+					this.sendCache.WriteTo(0, IPAddress.HostToNetworkOrder(messageSize));
 					this.sendBuffer.Write(this.sendCache, 0, PacketParser.OuterPacketSizeLength);
 					
 					this.sendBuffer.Write(stream.GetBuffer(), (int)stream.Position, (int)(stream.Length - stream.Position));

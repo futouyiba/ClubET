@@ -10,15 +10,17 @@ namespace ET
     {
         public static void OnLogin(FUI_LoginComponent self)
         {
-            FUI_Login fuiLogin = self.FuiUIPanelLogin;
-            LoginGateHelper.Login(self, GlobalDefine.GetLoginAddress(), fuiLogin.m_accountText.text,
-                fuiLogin.m_passwordText.text).Coroutine();
+            // FUI_Login fuiLogin = self.FuiUIPanelLogin;
+            // LoginGateHelper.Login(self, GlobalDefine.GetLoginAddress(), fuiLogin.m_accountText.text,
+                // fuiLogin.m_passwordText.text).Coroutine();
+            RegisterHelper.Connect(self, GlobalDefine.GetLoginAddress());
+            
         }
         
         public static void OnRegister(FUI_LoginComponent self)
         {
             FUI_Login fuiLogin = self.FuiUIPanelLogin;
-            RegisteHelper.Register(self, GlobalDefine.GetLoginAddress(), fuiLogin.m_accountText.text,
+            RegisterHelper.Register(self, GlobalDefine.GetLoginAddress(), fuiLogin.m_accountText.text,
                 fuiLogin.m_passwordText.text).Coroutine();
         }
     }

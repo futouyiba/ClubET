@@ -12,6 +12,7 @@ namespace ET
     public class Proto2CS
     {
         [Command("ETEditor_Proto2CS", "PB协议导出", Category = "ETEditor")]
+        [MenuItem("Tools/Proto2CS")]
         public static void DoProto2CS()
         {
             ProcessHelper.Run("Proto2CS.exe", "", "../Tools/Proto2CS/Bin/");
