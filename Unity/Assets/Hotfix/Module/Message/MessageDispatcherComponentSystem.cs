@@ -48,7 +48,7 @@ namespace ET
                 IClubHandler iMHandler = Activator.CreateInstance(type) as IClubHandler;
                 if (iMHandler == null)
                 {
-                    Log.Error($"message handle {type.Name} 需要继承 IMHandler");
+                    Log.Error($"message handle {type.Name} 需要继承 IClubHandler");
                     continue;
                 }
 

@@ -152,12 +152,14 @@
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\M2C_ChangeUnitAttributeValueHandler.cs" />
      <Compile Include="Assets\Hotfix\Module\Message\PingComponentSystem.cs" />
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\SkillSystem\BuffSystem\ListenBuffEvents\ListenBuffEvent_Normal.cs" />
+     <Compile Include="Assets\Hotfix\NKGMOBA\Unit\get_transfer_endpoint_s2c_handler.cs" />
      <Compile Include="Assets\Hotfix\Module\Numeric\NumericComponentSystem.cs" />
      <Compile Include="Assets\Hotfix\Module\AI\AIDispatcherComponentSystem.cs" />
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\M2C_CommonAttackHandler.cs" />
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\NPBehave\TheDataContainsAction\BBValue\NP_ChangeTargetSkillBBValueAction.cs" />
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\NPBehave\TheDataContainsAction\NP_TriggerAttackCDAction.cs" />
-     <Compile Include="Assets\Hotfix\NKGMOBA\Unit\get_transfer_endpoint_s2c_handler.cs" />
+     <Compile Include="Assets\Hotfix\NKGMOBA\Unit\authenticate_s2c_handler.cs" />
+     <Compile Include="Assets\Hotfix\NKGMOBA\Unit\all_sync_hander.cs" />
      <None Include="Assets\Hotfix\Unity.Hotfix.asmdef" />
      <None Include="Assets\Hotfix\csc.rsp" />
  <Reference Include="UnityEngine">
@@ -441,9 +443,6 @@
  </Reference>
  <Reference Include="MongoDB.Bson">
  <HintPath>C:/Users/futou/Documents/NKGMobaBasedOnET/Unity/Assets/Plugins/MongoDB.Bson.dll</HintPath>
- </Reference>
- <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
- <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>C:/Users/futou/Documents/NKGMobaBasedOnET/Unity/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>

@@ -15,6 +15,6 @@ namespace ET
 
     public interface IClubHandler:IMHandler
     {
-        ETVoid HandleError(Session session, int errorCode, object innerMessage);
+        void HandleError(Session session, int errorCode, object innerMessage);
     }
 }

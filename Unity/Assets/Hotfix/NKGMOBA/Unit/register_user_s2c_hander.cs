@@ -21,7 +21,7 @@ namespace ET
             await ETTask.CompletedTask;
         }
 
-        public override async ETVoid HandleError(Session session, int errorCode, object innerMessage)
+        protected override async ETVoid RunError(Session session, int errorCode, object innerMessage)
         {
             Debug.Log($"register error, error code is:{errorCode}");
             await RegisterHelper.Register(null, String.Empty, String.Empty, String.Empty);

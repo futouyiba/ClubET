@@ -59,7 +59,18 @@ namespace ET
             this.Run(session, message).Coroutine();
         }
 
-        public abstract ETVoid HandleError(Session session, int errorCode, object innerMessage);
+        protected abstract ETVoid RunError(Session session,int errorCode, object innerMessage);
+
+        public void HandleError(Session session, int errorCode, object innerMessage)
+        {
+            if (session.IsDisposed)
+            {
+                Log.Error($"session disconnect, handle error code: {errorCode}");
+                return;
+            }
+
+            this.RunError(session,errorCode, innerMessage).Coroutine();
+        }
 
         public Type GetMessageType()
         {
