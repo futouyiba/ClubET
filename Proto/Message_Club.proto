@@ -1,0 +1,153 @@
+syntax = "proto3";
+package ET;
+// c=customer； s=selector； t=transfer
+// 服务端返回的Message就是Error String，Error就是error code
+// 初步的想法是两种节点都有整份的proto文件，但有一些无需handle处理
+
+//ResponseType register_user_s2c
+message register_user_c2s // IRequest
+{
+  int32 RpcId = 90;
+  int32 device_type = 1; // 设备类型
+  string device_model = 2;   // 设备型号
+  string device_product_id = 3;  // 设备产品ID
+  string desc = 8;     // 设备描述
+}
+/// 返回
+
+message register_user_s2c // IResponse
+// IResponse
+{
+  int32 RpcId = 90;
+  int32 Error = 91;
+  string Message = 92;
+  int32 user_id = 1;    // 用户ID
+}
+
+///
+/// 获取数据中转服务endpoint
+///
+//ResponseType get_transfer_endpoint_s2c
+message get_transfer_endpoint_c2s // IRequest
+// IRequest
+{
+  int32 RpcId = 90;
+  int32 user_id = 1;    // 用户ID
+  int32 endpoint_id = 2;    // 端点号
+}
+/// 返回
+message get_transfer_endpoint_s2c // IResponse
+// IResponse
+{
+  int32 RpcId = 90;
+  int32 Error = 91;
+  string Message = 92;
+  string ip = 1;     // IP
+  int32 port = 2;    // Port
+  int32 endpoint_id = 3;    // 端点号
+}
+
+//ResponseType authenticate_t2c
+message authenticate_c2t // IRequest
+{
+  int32 RpcId = 90;
+  int32 user_id = 1;     // 用户ID
+  int32 device_type = 2; // 设备类型
+  string device_product_id = 3;  // 设备产品ID
+}
+
+message authenticate_t2c // IResponse
+{
+  int32 RpcId = 90;
+  int32 Error = 91;
+  string Message = 92;
+}
+
+///
+/// 心跳消息   定期30秒发一次。若30秒内没发
+///
+message heartbeat_c2t // IMessage
+{
+}
+
+///
+/// 全状态同步消息  
+///
+message all_sync_t2c // IMessage
+{
+  int32 house_type = 1;  // 房间类型
+  int32 music_id = 2;     // 正在放的音乐
+  repeated int32 on_lighting_ids = 3; // 亮着的灯ID数组
+  repeated int32 on_dj_ids = 4; // 有人的DJ位置ID数组
+  repeated int32 dj_playerids = 5; // DJ玩家ID数组，顺序与on_dj_ids对应   playerid和userid是同一个id，一一对应。以后可能会分开。
+  repeated player players = 6;    // 玩家状态数组 这是id
+}
+message player
+{
+   int32 player_id = 1;     // 玩家ID  todo考虑  合并仓库？
+   float x = 2;   // 位置x：0-1
+   float y = 3;   // 位置y：0-1
+   int32 is_dj = 4;   // 是否DJ，0-否，其他-dj编号  2就表示站在2号dj位置上。
+   float big_factor = 5;   // 放大因子   多个放大会累积相乘。
+   int32 figure_id = 6;   // 形象id   
+   string player_name = 7;
+}
+
+///
+/// 玩家进入消息
+///
+message player_enter_t2c // IMessage
+{
+  player one_player = 1;     // 玩家状态
+}
+
+///
+/// 玩家离开消息
+///
+message player_leave_t2c // IMessage
+{
+  int32 player_id = 1;     // 玩家ID
+}
+
+///
+/// 动作请求消息
+///
+//ResponseType action_req_t2c
+message action_req_c2t // IRequest
+{
+  int32 RpcId = 90;
+  int32 action_id = 1;    // 动作ID  后面约定下。
+  int32 int1 = 2;    // 整型内容1
+  int32 int2 = 3;    // 整型内容2
+  float float1 = 4;    // 浮点型内容1
+  float float2 = 5;    // 浮点型内容2
+}
+ 
+message action_req_t2c // IResponse
+{ 
+  // 这个不是广播的。
+  int32 RpcId = 90;
+  int32 Error = 91;
+  string Message = 92;
+  int32 action_id = 1;    // 动作ID
+  int32 int1 = 2;    // 整型内容1
+  int32 int2 = 3;    // 整型内容2
+  float float1 = 4;    // 浮点型内容1
+  float float2 = 5;    // 浮点型内容2
+}
+
+///
+/// 动作同步消息
+///
+message action_syn_t2c // IMessage
+{
+  int32 RpcId = 90;
+  int32 error_code = 80;
+  string error_string = 81;
+  int32 player_id = 1;     // 玩家ID
+  int32 action_id = 2;    // 动作ID
+  int32 int1 = 3;    // 整型内容1
+  int32 int2 = 4;    // 整型内容2
+  float float1 = 5;    // 浮点型内容1
+  float float2 = 6;    // 浮点型内容2
+}
