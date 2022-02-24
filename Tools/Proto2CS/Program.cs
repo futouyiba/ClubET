@@ -57,7 +57,7 @@ namespace ET
             // Proto2CS("ET", "../../../Proto/OuterMessage_Gate.proto", clientMessagePath, "OuterOpcode_Gate", 20000);
             // GenerateOpcode("ET", "OuterOpcode_Gate", clientMessagePath);
             Proto2CS("ET", "../../../Proto/OuterMessage_Realm.proto", clientMessagePath, "OuterOpcode_Realm", 30000);
-            GenerateOpcode("ET", "OuterOpcode_Realm", clientMessagePath);
+            // GenerateOpcode("ET", "OuterOpcode_Realm", clientMessagePath);
             // Proto2CS("ET", "../../../Proto/OuterMessage_Lobby.proto", clientMessagePath, "OuterOpcode_Lobby", 40000);
             // GenerateOpcode("ET", "OuterOpcode_Lobby", clientMessagePath);
             // Proto2CS("ET", "../../../Proto/OuterMessage_Map.proto", clientMessagePath, "OuterOpcode_Map", 50000);
