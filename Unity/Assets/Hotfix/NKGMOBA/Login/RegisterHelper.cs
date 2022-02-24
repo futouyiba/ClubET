@@ -12,7 +12,7 @@ namespace ET
         public static string DEVICE_PRODUCT_ID = "DEVICE_PRODUCT_ID";
         public static string DEVICE_MODEL = "DEVICE_MODEL";
         public static string USER_ID = "USER_ID";
-        public static int registerPostfix = 40;
+        public static int registerPostfix = 70;
         public static string CloudIp = "82.157.8.127";
         public static int port = 8800;
         public static Entity fuiComponent;

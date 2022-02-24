@@ -38,8 +38,10 @@ namespace ET
             this.lastMessageTime = TimeHelper.ClientFrameTime();
             this.LastMessage = message;
                         
-            if (message is IResponse response)
+            if (tMsg.rpc_id>0)
+            // if (message is IResponse response)
             {
+                var response = message as IResponse;
                 session.OnRead((ushort)opcode,tMsg.rpc_id,tMsg.error_code, response);
                 return;
             }

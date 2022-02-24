@@ -23,40 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1715052-b88e-4a65-9b40-1aa413711389" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Proto/OuterMessage_Realm.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../Proto/OuterMessage_Realm.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Animancer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Animancer.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Hotfix/Module/MessageOuter/OuterMessageDispatcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hotfix/Module/MessageOuter/OuterMessageDispatcher.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Hotfix/NKGMOBA/Login/RegisterHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hotfix/NKGMOBA/Login/RegisterHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model/Generate/Message/OuterMessage_Realm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Model/Generate/Message/OuterMessage_Realm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model/Module/Message/IMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Model/Module/Message/IMessage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Model/Module/Message/MessageSerializeHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Model/Module/Message/MessageSerializeHelper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Model/Module/Message/Session.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Model/Module/Message/Session.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Res/Code/Hotfix.dll.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/Code/Hotfix.dll.bytes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Res/Code/Hotfix.pdb.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/Code/Hotfix.pdb.bytes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Code/HotfixView.dll.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/Code/HotfixView.dll.bytes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Code/HotfixView.pdb.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/Code/HotfixView.pdb.bytes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Res/Code/Model.dll.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/Code/Model.dll.bytes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Res/Code/Model.pdb.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/Code/Model.pdb.bytes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Code/ModelView.dll.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/Code/ModelView.dll.bytes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Code/ModelView.pdb.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/Code/ModelView.pdb.bytes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Sprite/Loadings/HeroLoadingIcons.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/Sprite/Loadings/HeroLoadingIcons.spriteatlas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Res/Sprite/Skills/Darius_SkillIcons.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/Sprite/Skills/Darius_SkillIcons.spriteatlas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IngameDebugConsole.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/IngameDebugConsole.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IngameDebugConsole.Runtime.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/IngameDebugConsole.Runtime.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NodeGraphProcessor.Examples.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NodeGraphProcessor.Examples.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sirenix.OdinInspector.CompatibilityLayer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Sirenix.OdinInspector.CompatibilityLayer.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.Hotfix.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.Hotfix.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.Model.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.Model.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.ThirdParty.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.ThirdParty.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XAsset.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/XAsset.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XAsset.Runtime.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/XAsset.Runtime.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.alelievr.NodeGraphProcessor.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/com.alelievr.NodeGraphProcessor.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.alelievr.NodeGraphProcessor.Runtime.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/com.alelievr.NodeGraphProcessor.Runtime.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +219,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="XThreadsFramesViewSplitterKey" value="0.26233765" />
+    <property name="XThreadsFramesViewSplitterKey" value="0.38231632" />
     <property name="full.screen.before.presentation.mode" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -396,6 +370,19 @@
           <line>32</line>
           <properties documentPath="C:\Users\futou\Documents\NKGMobaBasedOnET\Unity\Assets\Model\Module\Message\MessageSerializeHelper.cs" initialLine="32" containingFunctionPresentation="method 'SerializeTo'" />
           <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Hotfix/Module/MessageOuter/OuterMessageDispatcher.cs</url>
+          <line>40</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Hotfix/Module/MessageOuter/OuterMessageDispatcher.cs" initialLine="40" containingFunctionPresentation="method 'Dispatch'">
+            <startOffsets>
+              <option value="1459" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1477" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

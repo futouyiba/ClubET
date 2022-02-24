@@ -30,12 +30,12 @@ namespace ET
         }
 
         public AService AService;
-        
+
         private static int RpcId
         {
             get;
             set;
-        }
+        } = 1;
 
         private readonly Dictionary<int, RpcInfo> requestCallbacks = new Dictionary<int, RpcInfo>();
         
