@@ -81,8 +81,6 @@ namespace ET
 	{
 /// 消息类型
 /// 消息类型
-// int32 RpcId = 90;
-// int32 RpcId = 90;
 		[ProtoMember(1)]
 		public int type { get; set; }
 
@@ -91,18 +89,21 @@ namespace ET
 		[ProtoMember(2)]
 		public byte[] body { get; set; }
 
-///
-///
-/// 错误信息：如果消息执行错误，则回复错误编码和描述
-/// 错误信息：如果消息执行错误，则回复错误编码和描述
-/// error_code = 0 表示成功，否则失败
-/// error_code = 0 表示成功，否则失败
-///
-///
 		[ProtoMember(3)]
+		public int rpc_id { get; set; }
+
+///
+///
+/// 错误信息：如果消息执行错误，则回复错误编码和描述
+/// 错误信息：如果消息执行错误，则回复错误编码和描述
+/// error_code = 0 表示成功，否则失败
+/// error_code = 0 表示成功，否则失败
+///
+///
+		[ProtoMember(4)]
 		public int error_code { get; set; }
 
-		[ProtoMember(4)]
+		[ProtoMember(5)]
 		public string error_string { get; set; }
 
 	}
@@ -154,9 +155,8 @@ namespace ET
 // IRequest
 // IRequest
 	{
-		[ProtoMember(90)]
-		public int RpcId { get; set; }
-
+// int32 RpcId = 90;
+// int32 RpcId = 90;
 		[ProtoMember(1)]
 		public int user_id { get; set; }
 
@@ -172,9 +172,8 @@ namespace ET
 // IResponse
 // IResponse
 	{
-		[ProtoMember(90)]
-		public int RpcId { get; set; }
-
+// int32 RpcId = 90;
+// int32 RpcId = 90;
 		[ProtoMember(1)]
 		public string ip { get; set; }
 

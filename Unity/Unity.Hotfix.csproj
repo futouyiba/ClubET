@@ -86,6 +86,7 @@
      <Compile Include="Assets\Hotfix\NKGMOBA\Move\MoveComponentSystem.cs" />
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\NPBehave\TheDataContainsAction\NP_CheckUnitKilledBySpecialMethodAction.cs" />
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\NPBehave\TheDataContainsAction\NP_SetCDInfoAction.cs" />
+     <Compile Include="Assets\Hotfix\NKGMOBA\Unit\all_sync_hander.cs" />
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\SkillSystem\BuffSystem\Core\BuffTimerAndOverlayHelper.cs" />
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\L2C_AllowToEnterMapHandler.cs" />
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\SkillSystem\BuffSystem\Core\BuffManagerComponent.cs" />
@@ -123,6 +124,7 @@
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\SkillSystem\BuffSystem\BindStateBuffSystem.cs" />
      <Compile Include="Assets\Hotfix\Module\Message\SessionIdleCheckerComponentSystem.cs" />
      <Compile Include="Assets\Hotfix\Module\AI\AIComponentSystem.cs" />
+     <Compile Include="Assets\Hotfix\NKGMOBA\Unit\authenticate_s2c_handler.cs" />
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\NPBehave\TheDataContainsAction\NP_WaitCDAction.cs" />
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\NPBehave\TheDataContainsAction\NP_RemoveBuffAction.cs" />
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\NPBehave\TheDataContainsAction\NP_SetUnitIdTheColliderBelongToAction.cs" />
@@ -158,8 +160,6 @@
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\M2C_CommonAttackHandler.cs" />
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\NPBehave\TheDataContainsAction\BBValue\NP_ChangeTargetSkillBBValueAction.cs" />
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\NPBehave\TheDataContainsAction\NP_TriggerAttackCDAction.cs" />
-     <Compile Include="Assets\Hotfix\NKGMOBA\Unit\authenticate_s2c_handler.cs" />
-     <Compile Include="Assets\Hotfix\NKGMOBA\Unit\all_sync_hander.cs" />
      <None Include="Assets\Hotfix\Unity.Hotfix.asmdef" />
      <None Include="Assets\Hotfix\csc.rsp" />
  <Reference Include="UnityEngine">
