@@ -99,17 +99,17 @@ namespace ET
             set;
         }
 
-        public void OnRead(ushort opcode, IResponse response)
+        public void OnRead(ushort opcode, int rpcId, int error,IResponse response)
         {
             OpcodeHelper.LogMsg(this.DomainZone(), opcode, response);
             
-            if (!this.requestCallbacks.TryGetValue(response.RpcId, out var action))
+            if (!this.requestCallbacks.TryGetValue(rpcId, out var action))
             {
                 return;
             }
 
-            this.requestCallbacks.Remove(response.RpcId);
-            if (ErrorCode.IsRpcNeedThrowException(response.Error))
+            this.requestCallbacks.Remove(rpcId);
+            if (ErrorCode.IsRpcNeedThrowException(error))
             {
                 action.Tcs.SetException(new Exception($"Rpc error, request: {action.Request} response: {response}"));
                 return;
@@ -122,7 +122,7 @@ namespace ET
             int rpcId = ++RpcId;
             RpcInfo rpcInfo = new RpcInfo(request);
             this.requestCallbacks[rpcId] = rpcInfo;
-            request.RpcId = rpcId;
+            // request.RpcId = rpcId;
 
             this.Send(request);
             
@@ -136,7 +136,7 @@ namespace ET
                 this.requestCallbacks.Remove(rpcId);
                 Type responseType = OpcodeTypeComponent.Instance.GetResponseType(action.Request.GetType());
                 IResponse response = (IResponse) Activator.CreateInstance(responseType);
-                response.Error = ErrorCode.ERR_Cancel;
+                // response.Error = ErrorCode.ERR_Cancel;
                 action.Tcs.SetResult(response);
             }
 
@@ -158,8 +158,8 @@ namespace ET
             int rpcId = ++RpcId;
             RpcInfo rpcInfo = new RpcInfo(request);
             this.requestCallbacks[rpcId] = rpcInfo;
-            request.RpcId = rpcId;
-            this.Send(request);
+            // request.RpcId = rpcId;
+            this.Send(request,rpcId);
             return await rpcInfo.Tcs;
         }
 
@@ -201,6 +201,29 @@ namespace ET
         {
             this.LastSendTime = TimeHelper.ClientNow();
             this.AService.SendStream(this.Id, actorId, memoryStream);
+        }
+        
+        // added by sf
+        public void Send(IMessage message,int rpcId)
+        {
+            switch (this.AService.ServiceType)
+            {
+                case ServiceType.Inner:
+                {
+                    (ushort opcode, MemoryStream stream) = MessageSerializeHelper.MessageToStream(0, message,rpcId);
+                    OpcodeHelper.LogMsg(this.DomainZone(), opcode, message);
+                    this.Send(0, stream);
+                    break;
+                }
+                case ServiceType.Outer:
+                {
+                    (ushort opcode, MemoryStream stream) = MessageSerializeHelper.MessageToStream(message,rpcId);
+                    OpcodeHelper.LogMsg(this.DomainZone(), opcode, message);
+                    Log.Info(BitConverter.ToString(stream.ToArray()));
+                    this.Send(0, stream);
+                    break;
+                }
+            }
         }
     }
 }

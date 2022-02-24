@@ -42,7 +42,7 @@ enum Type
 ///
 /// 注册消息
 ///
-message register_user_c2s // IMessage
+message register_user_c2s // IRequest
 {
     int32 device_type = 1; // 设备类型
     string device_model = 2;   // 设备型号
@@ -50,7 +50,7 @@ message register_user_c2s // IMessage
     string desc = 8;     // 设备描述
 }
 /// 返回
-message register_user_s2c  // IMessage
+message register_user_s2c  // IResponse
 {
     int32 user_id = 1;    // 用户ID
 }
@@ -58,6 +58,7 @@ message register_user_s2c  // IMessage
 ///
 /// 获取数据中转服务endpoint
 ///
+//ResponseType register_user_s2c
 message get_transfer_endpoint_c2s  // IMessage
 {
     int32 user_id = 1;    // 用户ID

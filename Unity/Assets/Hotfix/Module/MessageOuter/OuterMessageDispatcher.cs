@@ -37,18 +37,18 @@ namespace ET
             }
             this.lastMessageTime = TimeHelper.ClientFrameTime();
             this.LastMessage = message;
+                        
+            if (message is IResponse response)
+            {
+                session.OnRead((ushort)opcode,tMsg.rpc_id,tMsg.error_code, response);
+                return;
+            }
+            
             if (tMsg.error_code !=0)
             {
                 MessageDispatcherComponent.Instance.HandleError(session,opcode,tMsg.error_code, message);
                 return;
             }
-            
-            if (message is IResponse response)
-            {
-                session.OnRead((ushort)opcode, response);
-                return;
-            }
-
 
             // 普通消息或者是Rpc请求消息
             MessageDispatcherComponent.Instance.Handle(session, opcode, message);

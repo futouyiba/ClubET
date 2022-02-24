@@ -28,7 +28,7 @@ namespace ET
 #endif
         }
 
-        public static void SerializeTo(ushort opcode, object obj, MemoryStream memoryStream)
+        public static void SerializeTo(ushort opcode, object obj, MemoryStream memoryStream, int RpcId=-1)
         {
             if (opcode < PbMaxOpcode)
             {
@@ -37,6 +37,7 @@ namespace ET
                 {
                     body = bodyBytes,
                     type = opcode,
+                    rpc_id = RpcId,
                 };
                 
                 ProtobufHelper.ToStream(tMsg, memoryStream);
@@ -72,7 +73,7 @@ namespace ET
             return stream;
         }
         
-        public static (ushort, MemoryStream) MessageToStream(object message, int count = 0)
+        public static (ushort, MemoryStream) MessageToStream(object message,int rpcId=-1, int count = 0)
         {
             // MemoryStream stream = GetStream(Packet.OpcodeLength + count);
             MemoryStream stream = GetStream(count);
@@ -84,7 +85,7 @@ namespace ET
             
             // stream.GetBuffer().WriteTo(0, opcode);
             
-            MessageSerializeHelper.SerializeTo(opcode, message, stream);
+            MessageSerializeHelper.SerializeTo(opcode, message, stream, rpcId);
             
             stream.Seek(0, SeekOrigin.Begin);
             return (opcode, stream);
