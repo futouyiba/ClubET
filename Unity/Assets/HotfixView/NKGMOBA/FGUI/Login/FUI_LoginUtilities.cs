@@ -21,7 +21,8 @@ namespace ET
         {
             FUI_Login fuiLogin = self.FuiUIPanelLogin;
             RegisterHelper.Register(self, GlobalDefine.GetLoginAddress(), fuiLogin.m_accountText.text,
-                fuiLogin.m_passwordText.text).Coroutine();
+            fuiLogin.m_passwordText.text).Coroutine();
+            // RegisterHelper.TestAuthenticateRpc();
         }
     }
 }

@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.IO;
 using System.Net;
 using System.Threading.Tasks;
+using NUnit.Compatibility;
 using UnityEngine;
 
 namespace ET
@@ -12,10 +13,15 @@ namespace ET
         public static string DEVICE_PRODUCT_ID = "DEVICE_PRODUCT_ID";
         public static string DEVICE_MODEL = "DEVICE_MODEL";
         public static string USER_ID = "USER_ID";
-        public static int registerPostfix = 40;
+        public static int registerPostfix = 75;
         public static string CloudIp = "82.157.8.127";
         public static int port = 8800;
         public static Entity fuiComponent;
+
+        public static int UserId75 = 32;
+        public static string DeviceModel75 = "DEVICE_MODEL75";
+        public static string DeviceProductId75 = "DEVICE_PRODUCT_ID75";
+        
         public static async ETTask Register(Entity fuiComponent, string address, string account, string password)
         {
             try
@@ -48,12 +54,13 @@ namespace ET
                 // FUI_LoadingComponent.ShowLoadingUI();
                 PlayerPrefs.SetString(RegisterHelper.DEVICE_MODEL, DEVICE_MODEL + postfixString);
                 PlayerPrefs.SetString(DEVICE_PRODUCT_ID, DEVICE_PRODUCT_ID+postfixString);
-                Game.Scene.GetComponent<PlayerComponent>()  .RealmSession.Send(new register_user_c2s()
+                var  (error,registerResp) = (await Game.Scene.GetComponent<PlayerComponent>()  .RealmSession.Call(new register_user_c2s()
                 {
                     device_type = 1,
                     device_model = DEVICE_MODEL + postfixString,
                     device_product_id = DEVICE_PRODUCT_ID + postfixString,
-                });
+                }));
+                Debug.Log("rpc invoked! response:    "+registerResp);
                 // var bytes = new byte[] {13,16,39,0,0,18,35,8,1,18,12,100,101,118,105,99,101,95,
                 //     109,111,100,101,108,26,17,100,101,118,105,99,101,95,112,
                 //     114,111,100,117,99,116,95,105,100};
@@ -89,8 +96,12 @@ namespace ET
             var playerComponent = Game.Scene.GetComponent<PlayerComponent>();
             if (playerComponent.RealmSession==null || playerComponent.RealmSession.IsDisposed)
             {
+                Debug.Log("before session create");
                 // playerComponent.RealmSession = Game.Scene.GetComponent<NetKcpComponent>().Create(selectorEndpoint);
-                playerComponent.RealmSession = fuiComponent.DomainScene() .GetComponent<NetKcpComponent>().Create(selectorEndpoint);
+
+                var netKcpComponent = Game.Scene.AddComponent<NetKcpComponent>();
+                playerComponent.RealmSession = netKcpComponent.Create(NetworkHelper.ToIPEndPoint("82.157.8.127:8800"));
+                Debug.Log("after session create");
             }
 
             await Task.CompletedTask;
@@ -110,7 +121,34 @@ namespace ET
             
             await ETTask.CompletedTask;
         }
+
+        public static async ETTask TestAuthenticateRpc()
+        {
+            // var lobbySession = fuiComponent.DomainScene()
+            // .GetComponent<NetKcpComponent>().Create(NetworkHelper.ToIPEndPoint("82.157.8.127", 8801));
+            var kcpComp = Game.Scene.AddComponent<NetKcpComponent>();
+            var lobbySession = kcpComp.Create(NetworkHelper.ToIPEndPoint("82.157.8.127:8801"));
+            Game.Scene.GetComponent<PlayerComponent>().LobbySession = lobbySession;
+            var (error,authResp) = await lobbySession.Call(new authenticate_c2s()
+            {
+                user_id = UserId75,
+                device_product_id = DeviceProductId75,
+                device_type = 1,
+            
+            });
+            Debug.Log($"authenticate rpc invoked, error is:{error}, response is:"+authResp);
+            
+            // lobbySession.Send(new authenticate_c2s()
+            // {
+            //     device_product_id = DeviceProductId75,
+            //     device_type = 1,
+            //     user_id = UserId75,
+            // });
+            // await ETTask.CompletedTask;
+        }
     }
+    
+    
 
     public class Beifen
     {
