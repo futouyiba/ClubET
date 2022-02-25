@@ -20,9 +20,9 @@ namespace ET
         public static void OnRegister(FUI_LoginComponent self)
         {
             FUI_Login fuiLogin = self.FuiUIPanelLogin;
-            // RegisterHelper.Register(self, GlobalDefine.GetLoginAddress(), fuiLogin.m_accountText.text,
-            //     fuiLogin.m_passwordText.text).Coroutine();
-            RegisterHelper.TestAuthenticateRpc();
+            RegisterHelper.Register(self, GlobalDefine.GetLoginAddress(), fuiLogin.m_accountText.text,
+            fuiLogin.m_passwordText.text).Coroutine();
+            // RegisterHelper.TestAuthenticateRpc();
         }
     }
 }
