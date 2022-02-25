@@ -160,6 +160,10 @@
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\M2C_CommonAttackHandler.cs" />
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\NPBehave\TheDataContainsAction\BBValue\NP_ChangeTargetSkillBBValueAction.cs" />
      <Compile Include="Assets\Hotfix\NKGMOBA\Battle\NPBehave\TheDataContainsAction\NP_TriggerAttackCDAction.cs" />
+     <Compile Include="Assets\Hotfix\NKGMOBA\Login\RegisterHelper_BACKUP_85115.cs" />
+     <Compile Include="Assets\Hotfix\NKGMOBA\Login\RegisterHelper_REMOTE_85115.cs" />
+     <Compile Include="Assets\Hotfix\NKGMOBA\Login\RegisterHelper_LOCAL_85115.cs" />
+     <Compile Include="Assets\Hotfix\NKGMOBA\Login\RegisterHelper_BASE_85115.cs" />
      <None Include="Assets\Hotfix\Unity.Hotfix.asmdef" />
      <None Include="Assets\Hotfix\csc.rsp" />
  <Reference Include="UnityEngine">

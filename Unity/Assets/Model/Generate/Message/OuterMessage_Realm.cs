@@ -186,8 +186,9 @@ namespace ET
 	}
 
 	[Message(OuterOpcode_Realm.authenticate_c2s)]
+	[ResponseType(typeof(authenticate_s2c))]
 	[ProtoContract]
-	public partial class authenticate_c2s: Object, IMessage
+	public partial class authenticate_c2s: Object, IRequest
 	{
 		[ProtoMember(1)]
 		public int user_id { get; set; }
@@ -202,7 +203,7 @@ namespace ET
 
 	[Message(OuterOpcode_Realm.authenticate_s2c)]
 	[ProtoContract]
-	public partial class authenticate_s2c: Object, IMessage
+	public partial class authenticate_s2c: Object, IResponse
 	{
 	}
 

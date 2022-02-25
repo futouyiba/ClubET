@@ -3,7 +3,6 @@ using System.ComponentModel;
 using System.IO;
 using System.Net;
 using System.Threading.Tasks;
-using NUnit.Compatibility;
 using UnityEngine;
 
 namespace ET
@@ -13,15 +12,10 @@ namespace ET
         public static string DEVICE_PRODUCT_ID = "DEVICE_PRODUCT_ID";
         public static string DEVICE_MODEL = "DEVICE_MODEL";
         public static string USER_ID = "USER_ID";
-        public static int registerPostfix = 75;
+        public static int registerPostfix = 70;
         public static string CloudIp = "82.157.8.127";
         public static int port = 8800;
         public static Entity fuiComponent;
-
-        public static int UserId75 = 32;
-        public static string DeviceModel75 = "DEVICE_MODEL75";
-        public static string DeviceProductId75 = "DEVICE_PRODUCT_ID75";
-        
         public static async ETTask Register(Entity fuiComponent, string address, string account, string password)
         {
             try
@@ -117,34 +111,7 @@ namespace ET
             
             await ETTask.CompletedTask;
         }
-
-        public static async ETTask TestAuthenticateRpc()
-        {
-            // var lobbySession = fuiComponent.DomainScene()
-            // .GetComponent<NetKcpComponent>().Create(NetworkHelper.ToIPEndPoint("82.157.8.127", 8801));
-            var kcpComp = Game.Scene.AddComponent<NetKcpComponent>();
-            var lobbySession = kcpComp.Create(NetworkHelper.ToIPEndPoint("82.157.8.127:8801"));
-            Game.Scene.GetComponent<PlayerComponent>().LobbySession = lobbySession;
-            var (error,authResp) = await lobbySession.Call(new authenticate_c2s()
-            {
-                user_id = UserId75,
-                device_product_id = DeviceProductId75,
-                device_type = 1,
-            
-            });
-            Debug.Log($"authenticate rpc invoked, error is:{error}, response is:"+authResp);
-            
-            // lobbySession.Send(new authenticate_c2s()
-            // {
-            //     device_product_id = DeviceProductId75,
-            //     device_type = 1,
-            //     user_id = UserId75,
-            // });
-            // await ETTask.CompletedTask;
-        }
     }
-    
-    
 
     public class Beifen
     {
