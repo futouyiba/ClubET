@@ -25,7 +25,7 @@ namespace ET
                 long time1 = TimeHelper.ClientNow();
                 try
                 {
-                    G2C_Ping response = await session.Call(self.C2G_Ping) as G2C_Ping;
+                    var (_, response) = ((int,G2C_Ping))await session.Call(self.C2G_Ping);
 
                     if (self.InstanceId != instanceId)
                     {
