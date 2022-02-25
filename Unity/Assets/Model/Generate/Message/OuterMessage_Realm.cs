@@ -111,7 +111,7 @@ namespace ET
 	[ResponseType(typeof(register_user_s2c))]
 	[Message(OuterOpcode_Realm.register_user_c2s)]
 	[ProtoContract]
-	public partial class register_user_c2s: Object, IMessage
+	public partial class register_user_c2s: Object, IRequest
 // IRequest
 // IRequest
 	{
@@ -134,7 +134,7 @@ namespace ET
 /// 返回
 	[Message(OuterOpcode_Realm.register_user_s2c)]
 	[ProtoContract]
-	public partial class register_user_s2c: Object, IMessage
+	public partial class register_user_s2c: Object, IResponse
 // IResponse
 // IResponse
 	{
@@ -151,7 +151,7 @@ namespace ET
 	[ResponseType(typeof(get_transfer_endpoint_s2c))]
 	[Message(OuterOpcode_Realm.get_transfer_endpoint_c2s)]
 	[ProtoContract]
-	public partial class get_transfer_endpoint_c2s: Object, IMessage
+	public partial class get_transfer_endpoint_c2s: Object, IRequest
 // IRequest
 // IRequest
 	{
@@ -168,7 +168,7 @@ namespace ET
 /// 返回
 	[Message(OuterOpcode_Realm.get_transfer_endpoint_s2c)]
 	[ProtoContract]
-	public partial class get_transfer_endpoint_s2c: Object, IMessage
+	public partial class get_transfer_endpoint_s2c: Object, IResponse
 // IResponse
 // IResponse
 	{

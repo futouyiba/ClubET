@@ -54,12 +54,12 @@ namespace ET
                 // FUI_LoadingComponent.ShowLoadingUI();
                 PlayerPrefs.SetString(RegisterHelper.DEVICE_MODEL, DEVICE_MODEL + postfixString);
                 PlayerPrefs.SetString(DEVICE_PRODUCT_ID, DEVICE_PRODUCT_ID+postfixString);
-                var registerResp = (register_user_s2c)await Game.Scene.GetComponent<PlayerComponent>()  .RealmSession.Call(new register_user_c2s()
+                var  (error,registerResp) = (await Game.Scene.GetComponent<PlayerComponent>()  .RealmSession.Call(new register_user_c2s()
                 {
                     device_type = 1,
                     device_model = DEVICE_MODEL + postfixString,
                     device_product_id = DEVICE_PRODUCT_ID + postfixString,
-                });
+                }));
                 Debug.Log("rpc invoked! response:    "+registerResp);
                 // var bytes = new byte[] {13,16,39,0,0,18,35,8,1,18,12,100,101,118,105,99,101,95,
                 //     109,111,100,101,108,26,17,100,101,118,105,99,101,95,112,

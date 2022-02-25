@@ -25,6 +25,7 @@ namespace ET
             //     }
             //
             //     Game.EventSystem.Publish(new EventType.LoginLobbyFinish() {DomainScene = zoneScene}).Coroutine();
+            await ETTask.CompletedTask;
             }
             catch (Exception e)
             {
