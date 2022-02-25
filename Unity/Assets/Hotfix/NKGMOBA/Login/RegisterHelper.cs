@@ -96,8 +96,12 @@ namespace ET
             var playerComponent = Game.Scene.GetComponent<PlayerComponent>();
             if (playerComponent.RealmSession==null || playerComponent.RealmSession.IsDisposed)
             {
+                Debug.Log("before session create");
                 // playerComponent.RealmSession = Game.Scene.GetComponent<NetKcpComponent>().Create(selectorEndpoint);
-                playerComponent.RealmSession = fuiComponent.DomainScene() .GetComponent<NetKcpComponent>().Create(selectorEndpoint);
+
+                var netKcpComponent = Game.Scene.AddComponent<NetKcpComponent>();
+                playerComponent.RealmSession = netKcpComponent.Create(NetworkHelper.ToIPEndPoint("82.157.8.127:8800"));
+                Debug.Log("after session create");
             }
 
             await Task.CompletedTask;
